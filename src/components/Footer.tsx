@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
         {/* Left: Logo */}
         <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
-          <Image src="/images/logo.png" alt="Organisateur Logo" width={60} height={60} className="drop-shadow-md" />
+          <Image src="/images/logo-transparent.png" alt="Organisateur Logo" width={60} height={60} className="drop-shadow-md" />
         </div>
         {/* Center: Event name, edition, credit */}
         <div className="text-center flex-1">
-          <div className="font-semibold">Salon de l'Être – 6ᵉ édition 2025<br/>Blavozy</div>
+          <div className="font-semibold">Salon de l'être – 6ᵉ édition 2025<br/>Blavozy</div>
           <div className="text-xs text-gray-800 mt-1">©Production Directe</div>
         </div>
         {/* Right: Event info */}
