@@ -11,7 +11,7 @@ export default function Features() {
     {
       title: "Conférences & ateliers",
       description:
-        "Des spécialistes animent des temps d’initiation et d’apprentissage tout le week-end.",
+        "Des spécialistes animent des temps d'initiation et d'apprentissage tout le week-end.",
     },
     {
       title: "Nouveauté 2025 : Art Divinatoire",
@@ -20,7 +20,7 @@ export default function Features() {
     },
   ];
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12">
+    <section className="mx-auto max-w-6xl px-4 py-6">
       <div className="grid gap-6 md:grid-cols-3">
         {items.map((f) => (
           <Card key={f.title} {...f} />
