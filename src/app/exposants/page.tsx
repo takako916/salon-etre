@@ -10,7 +10,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
   {
     name: "LYDIE CLERC",
     activity: " KINÉSIOLOGUE ET PRATICIENNE EFT",
-    description: "Grâce à un test musculaire, la kinésiologie permet d’avoir accès à des informations au niveau du corps.\nLe but : déceler et corriger les déséquilibres et les stress d’origine physique, mentale et émotionnelle.",
+    description: "Grâce à un test musculaire, la kinésiologie permet d'avoir accès à des informations au niveau du corps.\nLe but : déceler et corriger les déséquilibres et les stress d'origine physique, mentale et émotionnelle.",
     imageUrl: "/images/lydieclerc.png"
   },
   {
@@ -45,7 +45,7 @@ export default function Exposants() {
       <h2 className="text-center text-xl text-[#218393] mb-8">Liste des exposants 2025</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {exposants.map((exposant, i) => (
-          <div key={i} className="flex bg-[#fcf7ea] border border-gray-300 rounded p-6 items-center gap-6">
+          <div key={i} className="flex bg-[#fcf7ea] border border-emerald-700 rounded p-6 items-center gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex-shrink-0">
               {exposant.imageUrl ? (
                 <img src={exposant.imageUrl} alt={exposant.name} className="w-24 h-32 object-cover rounded" />
