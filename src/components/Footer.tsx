@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -25,7 +26,7 @@ export default function Footer() {
           <div className="text-xs text-gray-800 mt-1">©Production Directe</div>
         </div>
         {/* Right: Event info */}
-        <div className="text-right text-sm md:text-base space-y-1">
+        <Link href="/lieu" className="text-right text-sm md:text-base space-y-1 block cursor-pointer hover:bg-emerald-50 rounded transition p-2">
           <div className="font-bold flex items-center justify-end gap-1">
             <span className="inline-block align-middle">
               {/* Calendar icon */}
@@ -55,7 +56,7 @@ export default function Footer() {
             <span className="inline-block w-2 h-2 bg-red-500 rounded-full mr-1 align-middle"></span>
             Entrée : 3€ ・ Parking gratuit
           </div>
-        </div>
+        </Link>
       </div>
     </footer>
   );
