@@ -10,11 +10,12 @@ type YearPoster = {
 };
 
 const posters: YearPoster[] = [
-  { year: 2020, img: "1.png", affiche: null },
-  { year: 2021, img: "2.png", affiche: null },
-  { year: 2022, img: "3.png", affiche: "affiche2022.jpg" },
-  { year: 2023, img: "4.png", affiche: "affiche2023.jpg" },
-  { year: 2024, img: "5.png", affiche: "affiche2024.jpg" },
+  { year: 2019, img: "1.png", affiche: "affiche2019.jpg" },
+  { year: 2020, img: "2.png", affiche: "affiche2020.jpg" },
+  { year: 2021, img: "3.png", affiche: "affiche2021.jpg" },
+  { year: 2022, img: "4.png", affiche: "affiche2022.jpg" },
+  { year: 2023, img: "5.png", affiche: "affiche2023.jpg" },
+  { year: 2024, img: "6.png", affiche: "affiche2024.jpg" },
   { year: 2025, img: "6.png", affiche: "affiche2025.png" },
 ];
 
@@ -25,7 +26,7 @@ export default function Timeline() {
     <section className="mx-auto w-full max-w-7xl px-2 md:px-8 py-16">
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-emerald-700">Les éditions précédentes</h2>
       {/* 年数のライン */}
-      <div className="relative w-full flex justify-between items-center mb-2">
+      <div className="relative w-full flex justify-between items-center mb-8">
         {/* 横いっぱいのグレーライン */}
         <div className="absolute left-0 right-0 top-1/2 h-0.5 bg-gray-300 z-0" style={{transform: 'translateY(-50%)'}} />
         {posters.map((p, i) => (
@@ -42,26 +43,17 @@ export default function Timeline() {
           </span>
         ))}
       </div>
-      {/* オレンジライン＋番号アイコン */}
-      <div className="relative w-full flex justify-between items-center mb-4">
-        {/* 横いっぱいのオレンジライン */}
-        <div className="absolute left-0 right-0 top-1/2 h-1 bg-orange-400 z-0" style={{transform: 'translateY(-50%)'}} />
-        {posters.map((p, i) => (
-          <span key={p.img} className="relative z-10 flex justify-center w-9 md:w-12">
-            <Image src={`/images/${p.img}`} alt={`No. ${i + 1}`} width={36} height={36} />
-          </span>
-        ))}
-      </div>
       {/* ポスターアイコン */}
       <div className="w-full flex justify-between items-end">
         {posters.map((p, i) => (
-          <div key={p.year} className="flex flex-col items-center w-9 md:w-12" style={{ width: i === posters.length - 1 ? 96 : (i >= 2 && i <= 4 ? 80 : undefined) }}>
+          <div key={p.year} className="flex flex-col items-center w-9 md:w-12" style={{ width: i === posters.length - 1 ? 96 : 80 }}>
             {p.affiche ? (
               <Image
                 src={`/images/${p.affiche}`}
                 alt={`Affiche ${p.year}`}
-                width={i === posters.length - 1 ? 120 : (i >= 2 && i <= 4 ? 90 : 72)}
-                height={i === posters.length - 1 ? 160 : (i >= 2 && i <= 4 ? 120 : 96)}
+                width={i === posters.length - 1 ? 120 : 90}
+                height={i === posters.length - 1 ? 160 : 120}
+                unoptimized
                 className={
                   `rounded shadow-md transition-transform duration-300 hover:scale-175 hover:z-10 cursor-pointer`
                 }

@@ -1,7 +1,32 @@
+import Image from "next/image";
+
 export default function NousContacter() {
   return (
     <div className="max-w-2xl mx-auto py-12 px-4">
       <h2 className="text-center text-xl text-[#218393] mb-8">Nous contacter</h2>
+      
+      {/* 写真セクション */}
+      <div className="flex justify-center gap-4 mb-8">
+        <div className="relative">
+          <Image
+            src="/images/exposer1.jpg"
+            alt="Exposer 1"
+            width={200}
+            height={150}
+            className="rounded-lg shadow-md"
+          />
+        </div>
+        <div className="relative">
+          <Image
+            src="/images/exposer2.jpg"
+            alt="Exposer 2"
+            width={200}
+            height={150}
+            className="rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+      
       <div className="bg-[#fcf7ea] rounded-xl p-8 space-y-6">
         <div className="text-lg font-semibold text-center">
           Vous souhaitez exposer au Salon de l&apos;être ou poser une question ?<br />
@@ -9,7 +34,7 @@ export default function NousContacter() {
         </div>
         <div className="space-y-2 text-center">
           <div className="font-bold">Organisation :</div>
-          <div>PRODUCTION DIRECTE – Victor MOUTBEKA</div>
+          <div>Production Directe – Victor MOUTBEKA</div>
           <div>Marilyne CHAURAND (Réflexologue)</div>
         </div>
         <div className="flex flex-col items-center space-y-2">
