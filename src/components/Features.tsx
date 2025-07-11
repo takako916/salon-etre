@@ -19,6 +19,7 @@ export default function Features() {
       title: "Nouveauté 2025 : Art Divinatoire",
       description:
         "Tarot, astrologie et approches intuitives pour explorer une autre facette du soin de soi.",
+      isNew: true,
     },
   ];
   return (
