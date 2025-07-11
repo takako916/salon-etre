@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-6">
       <h2 className="mb-4 text-2xl font-bold text-emerald-700 text-center">
-        Salon de l&apos;être : l&apos;Art de Prendre Soin de Soi.
+        Salon de l&apos;être : l&apos;Art de Prendre Soin de Soi
       </h2>
       <p className="leading-7">
         Le <strong>Salon de l&apos;être</strong>, organisé à{" "}
