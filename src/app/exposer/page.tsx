@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function NousContacter() {
   return (
     <div className="max-w-2xl mx-auto py-12 px-4">
-      <h2 className="text-center text-xl text-[#218393] mb-8">Nous contacter</h2>
+      <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Nous contacter</h2>
       
       {/* 写真セクション */}
       <div className="flex justify-center gap-4 mb-8">

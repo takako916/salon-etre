@@ -7,11 +7,13 @@ export default function Features() {
       title: "+ de 40 exposants",
       description:
         "Massage, réflexologie, énergétique chinoise, lithothérapie, coaching… Venez découvrir et tester.",
+      href: "/exposants",
     },
     {
       title: "Conférences & ateliers",
       description:
         "Des spécialistes animent des temps d'initiation et d'apprentissage tout le week-end.",
+      href: "/programme",
     },
     {
       title: "Nouveauté 2025 : Art Divinatoire",

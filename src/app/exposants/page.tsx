@@ -42,7 +42,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
 export default function Exposants() {
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
-      <h2 className="text-center text-xl text-[#218393] mb-8">Liste des exposants 2025</h2>
+      <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Liste des exposants 2025</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {exposants.map((exposant, i) => (
           <div key={i} className="flex bg-[#fcf7ea] border border-emerald-700 rounded p-6 items-center gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">

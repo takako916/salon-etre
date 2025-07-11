@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         medieval: ['MedievalSharp', 'cursive'],
+        playfair: ['Playfair Display', 'serif'],
       },
     },
   },

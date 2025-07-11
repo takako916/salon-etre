@@ -46,7 +46,7 @@ export default function Gallery() {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-8">
-      <h2 className="text-2xl font-bold text-emerald-700 mb-6 text-center">Aperçu des éditions précédentes</h2>
+      <h2 className="text-2xl font-bold text-emerald-700 mb-6 text-center font-playfair">Aperçu des éditions précédentes</h2>
       
       <div className="relative flex items-center justify-center">
         {/* Left Arrow */}

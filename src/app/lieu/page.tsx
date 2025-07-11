@@ -1,7 +1,7 @@
 export default function Lieu() {
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
-      <h2 className="text-center text-xl text-[#218393] mb-8">Lieu &amp; Accès</h2>
+      <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Lieu &amp; Accès</h2>
       <div className="bg-[#fcf7ea] rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
         {/* Google Map */}
         <div className="w-full md:w-1/2 flex justify-center">

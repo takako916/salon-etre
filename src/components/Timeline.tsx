@@ -24,7 +24,7 @@ export default function Timeline() {
 
   return (
     <section className="mx-auto w-full max-w-7xl px-2 md:px-8 py-16">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-emerald-700">Les éditions précédentes</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-emerald-700 font-playfair">Les éditions précédentes</h2>
       {/* 年数のライン */}
       <div className="relative w-full flex justify-between items-center mb-8">
         {/* 横いっぱいのグレーライン */}
