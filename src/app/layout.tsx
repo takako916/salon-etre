@@ -13,11 +13,11 @@ export const metadata = {
     google: "qCUSiVJLqyIsWSPIvMek8WU-XOaFbLoxe3J_WGvN9Gg",
   },
   openGraph: {
+    siteName: "Salon de l'être Blavozy",
     title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
     description:
       "Salon de l'être à Blavozy (43, Haute-Loire) : bien-être, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, et plus. Proche Le Puy-en-Velay.",
     url: "https://salon-etre.vercel.app",
-    siteName: "Salon de l'être Blavozy",
     images: [
       {
         url: "/images/affiche2025.png",
