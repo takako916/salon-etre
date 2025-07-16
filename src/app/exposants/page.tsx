@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Exposants Salon de l'être Blavozy 2025 | +40 Professionnels du Bien-être",
@@ -61,7 +62,13 @@ export default function Exposants() {
           <div key={i} className="flex bg-[#fcf7ea] border border-emerald-700 rounded p-6 items-center gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex-shrink-0">
               {exposant.imageUrl ? (
-                <img src={exposant.imageUrl} alt={exposant.name} className="w-24 h-32 object-cover rounded" />
+                <Image 
+                  src={exposant.imageUrl} 
+                  alt={exposant.name} 
+                  width={96}
+                  height={128}
+                  className="w-24 h-32 object-cover rounded" 
+                />
               ) : (
                 <svg width="96" height="128" viewBox="0 0 96 128" fill="none">
                   <rect x="12" y="16" width="72" height="96" rx="8" stroke="#222" strokeWidth="6" fill="none" />

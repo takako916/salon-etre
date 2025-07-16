@@ -83,10 +83,12 @@ export default function Timeline() {
             >
               ×
             </button>
-            <img
+            <Image
               src={modal.src}
               alt={modal.alt}
-              className="rounded shadow-2xl max-h-[80vh] max-w-[90vw]"
+              width={800}
+              height={600}
+              className="rounded shadow-2xl max-h-[80vh] max-w-[90vw] object-contain"
             />
           </div>
         </div>

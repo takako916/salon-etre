@@ -152,7 +152,7 @@ export default function Lieu() {
           </div>
           <div className="mt-4 p-3 bg-amber-100 rounded-lg">
             <p className="text-sm text-center">
-              <strong>Le Salon de l'être : l'événement bien-être de référence en Haute-Loire, 
+              <strong>Le Salon de l&apos;être : l&apos;événement bien-être de référence en Haute-Loire, 
               facilement accessible depuis Le Puy-en-Velay et toute la région !</strong>
             </p>
           </div>

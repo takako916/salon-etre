@@ -1,6 +1,7 @@
 "use client";
 // components/Gallery.tsx
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   { src: "/images/salontop.jpg", alt: "salontop" },
@@ -64,9 +65,11 @@ export default function Gallery() {
         <div className="flex gap-2 md:gap-4 justify-center items-center min-h-[224px] px-8 md:px-12">
           {visibleImages.map((image, index) => (
             <div key={currentIndex + index} className="flex-shrink-0">
-              <img 
+              <Image 
                 src={image.src} 
                 alt={image.alt} 
+                width={320}
+                height={224}
                 className="h-48 md:h-56 w-64 md:w-80 rounded-lg shadow-md object-cover transition-all duration-300 hover:scale-105"
               />
             </div>
