@@ -9,7 +9,7 @@ export const metadata = {
   description:
     "Salon de l'être à Blavozy (43, Haute-Loire) : bien-être, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, et plus. Proche Le Puy-en-Velay (Le Puy en Velay).",
   keywords:
-    "salon bien-être, Blavozy, Haute-Loire, 43, Le Puy-en-Velay, Le Puy en Velay, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, médium, magnétiseur, sexothérapie, cartomancie",
+    "salon bien-être, Blavozy, Haute-Loire, 43, Le Puy-en-Velay, Le Puy en Velay, Puy en Velay, salon bien-être Puy en Velay, bien-être Haute-Loire, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, médium, magnétiseur, sexothérapie, cartomancie",
   verification: {
     google: "qCUSiVJLqyIsWSPIvMek8WU-XOaFbLoxe3J_WGvN9Gg",
   },

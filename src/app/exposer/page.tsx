@@ -1,4 +1,16 @@
+import { Metadata } from 'next';
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Nous Contacter | Salon de l'être Blavozy 2025 | Exposer & Informations",
+  description: "Contactez l'organisation du Salon de l'être 2025 pour exposer ou poser vos questions. Production Directe - Victor MOUTBEKA, Marilyne CHAURAND. Tél: 06.29.18.16.58",
+  keywords: "contact salon bien-être Blavozy, exposer salon bien-être, organisation salon bien-être, Victor MOUTBEKA, Marilyne CHAURAND, Haute-Loire",
+  openGraph: {
+    title: "Nous Contacter - Salon de l'être Blavozy 2025",
+    description: "Contactez l'organisation pour exposer ou informations",
+    url: "https://salon-etre.vercel.app/exposer",
+  },
+};
 
 export default function NousContacter() {
   return (

@@ -1,3 +1,16 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Exposants Salon de l'être Blavozy 2025 | +40 Professionnels du Bien-être",
+  description: "Découvrez les exposants du Salon de l'être 2025 : massage, réflexologie, kinésiologie, magnétisme, sexothérapie, cartomancie, art thérapie. +40 professionnels du bien-être à Blavozy.",
+  keywords: "exposants salon bien-être, massage Blavozy, réflexologie, kinésiologie, magnétiseur, sexothérapie, cartomancie, art thérapie, bien-être Haute-Loire",
+  openGraph: {
+    title: "Exposants Salon de l'être Blavozy 2025",
+    description: "+40 professionnels du bien-être et du développement personnel",
+    url: "https://salon-etre.vercel.app/exposants",
+  },
+};
+
 const exposants = [
   {
     name: "HELIE ANNE",
