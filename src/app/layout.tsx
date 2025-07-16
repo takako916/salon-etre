@@ -2,6 +2,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata = {
   title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Banner />
         <Navbar />
+        <Breadcrumb />
         {children}
         <Footer />
       </body>
