@@ -30,9 +30,9 @@ export default function Lieu() {
               </svg>
             </span>
             <span className="font-bold">Horaires :</span><br />
-            Vendredi 10 octobre : conférence à 20h<br />
-            Samedi 11 octobre : 10h – 19h<br />
-            Dimanche 12 octobre : 10h – 18h
+            Vendredi 10 octobre 2025: conférence à 20h<br />
+            Samedi 11 octobre 2025: 10h – 19h<br />
+            Dimanche 12 octobre 2025: 10h – 18h
           </div>
           <div>
             <span className="inline-block align-middle mr-1">
@@ -42,7 +42,7 @@ export default function Lieu() {
                 <circle cx="12" cy="8.25" r="2.25" />
               </svg>
             </span>
-            <span className="font-bold">Centre socio-culturel de Blavozy</span><br />
+            <span className="font-bold">Centre socio-culturel de Blavozy (Csc Blavozy)</span><br />
             <a href="https://maps.google.com/?q=8+Pl.+Félix+Tempère,+43700+Blavozy" target="_blank" rel="noopener noreferrer" className="underline text-[#218393]">
               8 Pl. Félix Tempère, 43700 Blavozy
             </a>
