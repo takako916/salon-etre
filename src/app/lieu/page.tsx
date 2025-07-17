@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Lieu & Accès Salon de l'être Blavozy 2025 | Centre Socio-Culturel",
