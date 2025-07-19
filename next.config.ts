@@ -25,7 +25,12 @@ const nextConfig: NextConfig = {
   },
   // 画像最適化
   images: {
-    domains: ['salon-etre.vercel.app'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'salon-etre.vercel.app',
+      },
+    ],
   },
 };
 

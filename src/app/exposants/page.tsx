@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Exposants Salon de l'être Blavozy 2025 | +40 Professionnels du Bien-être",
-  description: "Découvrez les exposants du Salon de l'être 2025 : massage, réflexologie, kinésiologie, magnétisme, sexothérapie, cartomancie, art thérapie. +40 professionnels du bien-être à Blavozy.",
+  description: "Exposants Salon de l'être 2025 : massage, réflexologie, kinésiologie, magnétisme, sexothérapie, cartomancie. +40 professionnels à Blavozy.",
   keywords: "exposants salon bien-être, massage Blavozy, réflexologie, kinésiologie, magnétiseur, sexothérapie, cartomancie, art thérapie, bien-être Haute-Loire",
   openGraph: {
     title: "Exposants Salon de l'être Blavozy 2025",
@@ -56,6 +56,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
 export default function Exposants() {
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
+      <h1 className="text-center text-2xl text-[#218393] mb-8 font-playfair">Exposants Salon de l&apos;être Blavozy 2025 : +40 Professionnels du Bien-être, Massage, Réflexologie, Kinésiologie, Magnétisme - 10-12 Octobre 2025</h1>
       <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Liste des exposants 2025</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {exposants.map((exposant, i) => (

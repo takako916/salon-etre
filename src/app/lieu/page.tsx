@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Lieu & Accès Salon de l'être Blavozy 2025 | Centre Socio-Culturel",
-  description: "Informations pratiques pour le Salon de l'être 2025 : adresse, horaires, accès, parking. Centre socio-culturel de Blavozy, 8 Pl. Félix Tempère. Entrée 3€, parking gratuit.",
+  description: "Adresse et accès Salon de l'être 2025 : Centre socio-culturel de Blavozy, 8 Pl. Félix Tempère. 10-12 octobre 2025. Entrée 3€, parking gratuit.",
   keywords: "salon bien-être Blavozy adresse, centre socio-culturel Blavozy, accès salon bien-être, parking Blavozy, horaires salon bien-être, Haute-Loire 43",
   openGraph: {
     title: "Lieu & Accès Salon de l'être Blavozy 2025",
@@ -65,6 +65,7 @@ export default function Lieu() {
   return (
     <>
       <div className="max-w-5xl mx-auto py-8 px-2">
+        <h1 className="text-center text-2xl text-[#218393] mb-8 font-playfair">Lieu &amp; Accès Salon de l&apos;être Blavozy 2025 : Centre Socio-Culturel, Adresse, Horaires, Parking Gratuit - 10-12 Octobre 2025</h1>
         <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Lieu &amp; Accès</h2>
         <div className="bg-[#fcf7ea] rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center md:items-start">
           {/* Google Map */}
