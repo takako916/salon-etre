@@ -14,7 +14,11 @@ export const metadata: Metadata = {
 export default function Programme() {
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
-      <h1 className="text-center text-2xl text-[#218393] mb-8 font-playfair">Programme Salon de l&apos;être Blavozy 2025 : Conférences, Ateliers, Initiations, Animations - 10-12 Octobre 2025</h1>
+      <h1 className="text-center text-2xl text-[#218393] mb-8 font-playfair">
+        Programme Salon de l&apos;être Blavozy 2025 :<br />
+        Conférences, Ateliers, Initiations, Animations<br />
+        10-12 Octobre 2025
+      </h1>
       <div className="min-h-[60vh] flex items-center justify-center bg-[#fcf7ea] rounded-xl m-8">
         <span className="text-xl md:text-2xl text-[#218393] font-medieval text-center">
           Plus d&apos;informations à venir très bientôt !
