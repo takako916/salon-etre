@@ -27,16 +27,6 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['salon-etre.vercel.app'],
   },
-  // リダイレクト設定（カスタムドメイン用）
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/',
-        permanent: false,
-      },
-    ];
-  },
 };
 
 export default nextConfig;

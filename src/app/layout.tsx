@@ -26,6 +26,17 @@ export const metadata = {
   verification: {
     google: "qCUSiVJLqyIsWSPIvMek8WU-XOaFbLoxe3J_WGvN9Gg",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     siteName: "Salon de l'être Blavozy",
     title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
@@ -51,6 +62,12 @@ export const metadata = {
   },
   alternates: {
     canonical: "https://salon-etre.vercel.app",
+  },
+  other: {
+    'application-name': 'Salon de l\'être Blavozy',
+    'apple-mobile-web-app-title': 'Salon de l\'être Blavozy',
+    'msapplication-TileColor': '#218393',
+    'theme-color': '#218393',
   },
 };
 
@@ -101,16 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="fr">
-      <head>
-        {/* 追加のメタタグ */}
-        <meta name="application-name" content="Salon de l'être Blavozy" />
-        <meta name="apple-mobile-web-app-title" content="Salon de l'être Blavozy" />
-        <meta name="msapplication-TileColor" content="#218393" />
-        <meta name="theme-color" content="#218393" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        
+      <body>
         {/* 構造化データ */}
         <script
           type="application/ld+json"
@@ -124,8 +132,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify(websiteStructuredData),
           }}
         />
-      </head>
-      <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

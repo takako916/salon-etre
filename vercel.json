@@ -1,12 +1,6 @@
 {
   "name": "salon-etre-blavozy",
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -28,19 +22,6 @@
           "value": "index, follow"
         }
       ]
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/home",
-      "destination": "/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
     }
   ]
 } 
