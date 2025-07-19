@@ -6,11 +6,23 @@ import Breadcrumb from "@/components/Breadcrumb";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
+  metadataBase: new URL('https://salon-etre.vercel.app'),
+  title: {
+    default: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
+    template: "%s | Salon de l'être Blavozy"
+  },
   description:
     "Salon de l'être à Blavozy (43, Haute-Loire) : bien-être, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, et plus. Proche Le Puy-en-Velay (Le Puy en Velay).",
   keywords:
     "salon bien-être, Blavozy, Haute-Loire, 43, Le Puy-en-Velay, Le Puy en Velay, Puy en Velay, salon bien-être Puy en Velay, bien-être Haute-Loire, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, médium, magnétiseur, sexothérapie, cartomancie",
+  authors: [{ name: "Salon de l'être Blavozy" }],
+  creator: "Salon de l'être Blavozy",
+  publisher: "Salon de l'être Blavozy",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   verification: {
     google: "qCUSiVJLqyIsWSPIvMek8WU-XOaFbLoxe3J_WGvN9Gg",
   },
@@ -31,11 +43,88 @@ export const metadata = {
     locale: "fr_FR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
+    description: "Salon de l'être à Blavozy (43, Haute-Loire) : bien-être, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, et plus. Proche Le Puy-en-Velay.",
+    images: ["/images/affiche2025.png"],
+  },
+  alternates: {
+    canonical: "https://salon-etre.vercel.app",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // 構造化データ（Organization）
+  const organizationStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Salon de l'être Blavozy",
+    "url": "https://salon-etre.vercel.app",
+    "logo": "https://salon-etre.vercel.app/images/logo.png",
+    "description": "Salon de l'être à Blavozy : bien-être, massage, réflexologie, développement personnel. Proche Le Puy-en-Velay.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8 Pl. Félix Tempère",
+      "addressLocality": "Blavozy",
+      "postalCode": "43700",
+      "addressRegion": "Haute-Loire",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "areaServed": "FR"
+    },
+    "sameAs": [
+      "https://salon-etre.vercel.app"
+    ]
+  };
+
+  // WebSite構造化データ
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Salon de l'être Blavozy",
+    "url": "https://salon-etre.vercel.app",
+    "description": "Site officiel du Salon de l'être à Blavozy - 6e édition 2025",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Salon de l'être Blavozy"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://salon-etre.vercel.app/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="fr">
+      <head>
+        {/* 追加のメタタグ */}
+        <meta name="application-name" content="Salon de l'être Blavozy" />
+        <meta name="apple-mobile-web-app-title" content="Salon de l'être Blavozy" />
+        <meta name="msapplication-TileColor" content="#218393" />
+        <meta name="theme-color" content="#218393" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        
+        {/* 構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData),
+          }}
+        />
+      </head>
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>

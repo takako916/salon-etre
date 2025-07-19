@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
 
+# サイトマップ
 Sitemap: https://salon-etre.vercel.app/sitemap.xml
+
+# クロール遅延
+Crawl-delay: 1
+
+# 特定のファイルを除外
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# サイト名の明確化
+# Salon de l'être Blavozy - Site officiel
