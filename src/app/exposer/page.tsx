@@ -15,8 +15,7 @@ export const metadata: Metadata = {
 export default function NousContacter() {
   return (
     <div className="max-w-2xl mx-auto py-12 px-4">
-      <h1 className="text-center text-2xl text-[#218393] mb-8 font-playfair">Contact Salon de l&apos;être Blavozy 2025 : <br />Exposer, Informations, Organisation </h1>
-      <h2 className="text-center text-xl text-[#218393] mb-8 font-playfair">Nous contacter</h2>
+      <h1 className="text-center text-xl text-[#218393] mb-8 font-playfair">Nous contacter</h1>
       
       {/* 写真セクション */}
       <div className="flex justify-center gap-4 mb-8">
