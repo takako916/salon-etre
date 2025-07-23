@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: "Conférences, ateliers et animations du Salon de l'être 2025",
     url: "https://salon-etre.vercel.app/programme",
   },
+  alternates: {
+    canonical: "https://salon-etre.vercel.app/programme",
+  },
 };
 
 export default function Programme() {
