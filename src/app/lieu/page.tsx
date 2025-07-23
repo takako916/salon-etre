@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Lieu & Accès Salon de l'être Blavozy 2025 | Centre Socio-Culturel",
+  title: "Lieu & Accès | Salon de l'être Blavozy 2025",
   description: "Adresse et accès Salon de l'être 2025 : Centre socio-culturel de Blavozy, 8 Pl. Félix Tempère. 10-12 octobre 2025. Entrée 3€, parking gratuit.",
   keywords: "salon bien-être Blavozy adresse, centre socio-culturel Blavozy, accès salon bien-être, parking Blavozy, horaires salon bien-être, Haute-Loire 43",
   openGraph: {

@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "Exposants Salon de l'être Blavozy 2025  +40 Professionnels du Bien-être",
+  title: "posants Salon de l'être Blavozy 2025 | Bien-être Haute-Loire",
   description: "Exposants Salon de l'être 2025 : massage, réflexologie, kinésiologie, magnétisme, sexothérapie, cartomancie. +40 professionnels à Blavozy.",
   keywords: "exposants salon bien-être, massage Blavozy, réflexologie, kinésiologie, magnétiseur, sexothérapie, cartomancie, art thérapie, bien-être Haute-Loire",
   openGraph: {

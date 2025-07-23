@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Programme Salon de l'être Blavozy 2025 | Conférences & Ateliers",
+  title: "Programme | Salon de l'être Blavozy 2025",
   description: "Programme Salon de l'être 2025 à Blavozy : conférences, ateliers, initiations. 10-12 octobre 2025. Bien-être et développement personnel.",
   keywords: "programme salon bien-être, conférences bien-être, ateliers développement personnel, Blavozy 2025, soins naturels, spiritualité, massage, réflexologie",
   openGraph: {
