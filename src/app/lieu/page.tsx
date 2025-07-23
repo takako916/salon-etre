@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     description: "Centre socio-culturel de Blavozy - 10-12 octobre 2025",
     url: "https://salon-etre.vercel.app/lieu",
   },
+  alternates: {
+    canonical: "https://salon-etre.vercel.app/lieu",
+  },
 };
 
 // 構造化データ（Schema.org）

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: "+40 professionnels du bien-être et du développement personnel",
     url: "https://salon-etre.vercel.app/exposants",
   },
+  alternates: {
+    canonical: "https://salon-etre.vercel.app/exposants",
+  },
 };
 
 const exposants = [

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: "Contactez l'organisation pour exposer ou informations",
     url: "https://salon-etre.vercel.app/exposer",
   },
+  alternates: {
+    canonical: "https://salon-etre.vercel.app/exposer",
+  },
 };
 
 export default function NousContacter() {
