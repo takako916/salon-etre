@@ -54,6 +54,12 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Cartomancie – accompagnement vers soi",
     imageUrl: "/images/ecailleuredevie.png"
   },
+  {
+    name: "HYVERNAT MARIE-PAULE",
+    activity: "LUMIÈRE PAIX",
+    description: "Pratique énergétique, Accompagnement personnalisé Passage d’Ames et Guidance d’Ames. Ecriture intuitive. Découvertes des Êtres de la Nature.\nProposition sur le stand de découvrir l’écriture automatique, à partir d’une problématique ciblée. Cout :10€",
+    imageUrl: "/images/lumierepaix.png"
+  },
 ];
 
 export default function Exposants() {
