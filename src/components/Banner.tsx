@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <section>
       <Image
-        src="/images/bannier2025.jpg"
+        src="/images/bannier2025_2.jpg"
         alt="Salon de l’Être – bannière"
         width={800
         }

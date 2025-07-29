@@ -104,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@type": "WebSite",
     "name": "Salon de l'être Blavozy",
     "url": "https://salon-etre.vercel.app",
-    "description": "Site officiel du Salon de l'être à Blavozy - 6e édition 2025",
+    "description": "Site officiel du Salon de l'être à Blavozy - 7e édition 2025",
     "publisher": {
       "@type": "Organization",
       "name": "Salon de l'être Blavozy"

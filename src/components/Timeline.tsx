@@ -16,7 +16,7 @@ const posters: YearPoster[] = [
   { year: 2022, img: "4.png", affiche: "affiche2022.jpg" },
   { year: 2023, img: "5.png", affiche: "affiche2023.jpg" },
   { year: 2024, img: "6.png", affiche: "affiche2024.jpg" },
-  { year: 2025, img: "6.png", affiche: "affiche2025.png" },
+  { year: 2025, img: "6.png", affiche: "affiche2025_2.jpg" },
 ];
 
 export default function Timeline() {

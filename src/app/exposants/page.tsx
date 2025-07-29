@@ -60,6 +60,18 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Pratique énergétique, Accompagnement personnalisé Passage d’Ames et Guidance d’Ames. Ecriture intuitive. Découvertes des Êtres de la Nature.\nProposition sur le stand de découvrir l’écriture automatique, à partir d’une problématique ciblée. Cout :10€",
     imageUrl: "/images/lumierepaix.png"
   },
+  {
+    name: "VÉRONIQUE VÉROVE",
+    activity: "NUMÉROLOGIE",
+    description: "Numerologie (humaniste, pentanalogie, human design) astrologie indienne",
+    imageUrl: "/images/veroniqueverove.png"
+  },
+  {
+    name: "DELPHINE CHEVALIER",
+    activity: "MÉDIUMNITÉ - ART THÉRAPEUTE",
+    description: "médiumnité – soin de l’âme-guidancemédiumnité – soin de l’âme-guidance\n accompagnement au deuil\n art-thérapeute",
+    imageUrl: "/images/delphinechevalier.png"
+  },
 ];
 
 export default function Exposants() {

@@ -86,7 +86,7 @@ export default function Lieu() {
           {/* Info */}
           <div className="w-full md:w-1/2 text-base space-y-4">
             <div>
-              <div className="font-semibold">Salon de l&apos;être – 6ᵉ édition</div>
+              <div className="font-semibold">Salon de l&apos;être – 7ᵉ édition</div>
               <div>L&apos;art de prendre soin de soi</div>
             </div>
             <div>

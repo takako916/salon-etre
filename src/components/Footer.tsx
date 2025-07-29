@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
         {/* Center: Event name, edition, credit */}
         <div className="text-center flex-1">
-          <div className="font-semibold">Salon de l&apos;être – 6ᵉ édition 2025<br/>Blavozy</div>
+          <div className="font-semibold">Salon de l&apos;être – 7ᵉ édition 2025<br/>Blavozy</div>
           <div className="text-xs text-gray-800 mt-1">©Production Directe</div>
         </div>
         {/* Right: Event info */}
