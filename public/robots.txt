@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://salon-etre.vercel.app/sitemap.xml
+
+# サイトの基本情報
+# Salon de l'être Blavozy 2025
+# Bien-être Haute-Loire 43
