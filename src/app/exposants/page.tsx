@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import Card from '@/components/Card';
-import { truncate } from 'fs';
 
 export const metadata: Metadata = {
   title: "Exposants Salon de l'être Blavozy 2025 | Bien-être Haute-Loire",
