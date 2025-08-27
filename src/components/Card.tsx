@@ -7,9 +7,10 @@ type CardProps = {
   description: string;
   href?: string;
   isNew?: boolean;
+  atelier?: boolean;
 };
 
-export default function Card({ title, description, href, isNew }: CardProps) {
+export default function Card({ title, description, href, isNew, atelier }: CardProps) {
   // ボタンテキストをhrefで判定
   let buttonText = "";
   if (href === "/exposants") buttonText = "Liste d'exposants";
@@ -21,6 +22,9 @@ export default function Card({ title, description, href, isNew }: CardProps) {
         <div className="flex items-center gap-2 mb-2 whitespace-nowrap">
           {isNew && (
             <span className="bg-amber-200 text-emerald-700 text-xs font-bold rounded-full px-2 py-0.5 align-top mr-2">new</span>
+          )}
+          {atelier && (
+            <span className="bg-amber-200 text-emerald-700 text-xs font-bold rounded-full px-2 py-0.5 align-top mr-2">Atelier</span>
           )}
           <h3 className="text-xl font-semibold text-emerald-700 whitespace-normal">{title}</h3>
         </div>

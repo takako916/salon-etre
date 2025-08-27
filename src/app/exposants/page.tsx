@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Card from '@/components/Card';
+import { truncate } from 'fs';
 
 export const metadata: Metadata = {
   title: "Exposants Salon de l'être Blavozy 2025 | Bien-être Haute-Loire",
@@ -17,6 +19,14 @@ export const metadata: Metadata = {
 
 const exposants = [
   {
+    "name": "CHRISTINE CLÉMINO",
+    "activity": "CONFÉRENCE",
+    "description": "Expérience de mort imminente – La vie après la vie. Vendredi 10 octobre à 20h00 (entrée 5€).",
+    "imageUrl": "/images/exposants/christineclemino.png",
+    conference: true,
+    atelier: false,
+  },
+  {
     name: "HELIE ANNE",
     activity: "DANSE DE L'ÊTRE",
     description: `Danse ô cœur de soi : connexion aux 5 éléments.
@@ -24,6 +34,7 @@ Un moment de mouvement libre et accompagnée par ma voix pour vibrer la terre, l
 La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être exprimé, dans la bienveillance et la joie du corps, du cœur.`,
     imageUrl: "/images/exposants/helieanne.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "LYDIE CLERC",
@@ -31,6 +42,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Grâce à un test musculaire, la kinésiologie permet d'avoir accès à des informations au niveau du corps.\nLe but : déceler et corriger les déséquilibres et les stress d'origine physique, mentale et émotionnelle.",
     imageUrl: "/images/exposants/lydieclerc.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "PHILIPPE CLAËR",
@@ -38,6 +50,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Magnétiseur / rebouteux",
     imageUrl: "/images/exposants/philippeclaer.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "CHEVALIER DELPHINE",
@@ -45,6 +58,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Un accompagnement personnalisé autour du deuil et des grands passages de vie est proposé avec douceur, respect et profondeur.",
     imageUrl: "/images/exposants/chevalierdelphine.png",
     conference: true,
+    atelier: false,
   },
   {
     name: "LAURIANE CYDZIK",
@@ -52,6 +66,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Sexothérapeute\nThérapies individuelles et de couples.",
     imageUrl: "/images/exposants/laurianecydzik.png",
     conference: true,
+    atelier: false,
   },
   {
     name: "ÉCLAIREUSE DE VIE",
@@ -59,6 +74,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Cartomancie – accompagnement vers soi",
     imageUrl: "/images/exposants/ecailleuredevie.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "HYVERNAT MARIE-PAULE",
@@ -66,13 +82,15 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Pratique énergétique, Accompagnement personnalisé Passage d'Ames et Guidance d'Ames. Ecriture intuitive. Découvertes des Êtres de la Nature.\nProposition sur le stand de découvrir l'écriture automatique, à partir d'une problématique ciblée. Cout :10€",
     imageUrl: "/images/exposants/lumierepaix.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "VÉRONIQUE VÉROVE",
     activity: "NUMÉROLOGIE",
     description: "Numerologie (humaniste, pentanalogie, human design) astrologie indienne",
     imageUrl: "/images/exposants/veroniqueverove.png",
-    conference: false,
+    conference: true,
+    atelier: false,
   },
   {
     name: "DELPHINE CHEVALIER",
@@ -80,6 +98,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Médiumnité – soin de l'âme-guidancemédiumnité – soin de l'âme-guidance\n accompagnement au deuil\n art-thérapeute",
     imageUrl: "/images/exposants/delphinechevalier.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "AMANDINE PELLIZZARI",
@@ -87,6 +106,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "• Massage thaï (habillé, au sol sur futon, sans huile)\n• Réflexologie plantaire thaï (habillé, au sol ou sur table, avec huile bio)\n• Massage à l'huile ‹ deep tissue › (sur table / avec huile bio) au choix: – dos – mains & bras – pieds & jambes",
     "imageUrl": "/images/exposants/amandinepellizzari.png",
     conference: false,
+    atelier: true,
   },
   {
     name: "SOLARIA ALCHIMIA - EMICA MORGAN",
@@ -94,6 +114,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: `Déployer sa raison d'être par le subtil.\nÉnergéticien, Alchimiste de la conscience.\nMettez vos perceptions de clairvoyance au service de votre pouvoir personnel.`,
     imageUrl: "/images/exposants/emicamorgan.png",
     conference: true,
+    atelier: true,
   },
   {
     name: "DELPHINE SHIATSU 43",
@@ -101,6 +122,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Spécialiste en shiatsu – bien-être et accompagnement à la santé",
     imageUrl: "/images/exposants/shiatsu43.png",
     conference: true,
+    atelier: true,
   },
   {
     name: "SÉBASTIEN BONNET",
@@ -108,6 +130,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Nous pratiquons l'acupression antidouleur issue de techniques provenant directement des textes anciens comme le huangdi neijing et le nan jing.\nla méthode d'acupression utilisée est douce et indolore, car elle agit à distance des zones douloureuses. elle est particulièrement efficace pour soulager :\n- douleurs chroniques et anciennes – tendinites – entorses – sciatiques – lombalgies – cervicalgies – autres douleurs musculo – squelettiques",
     imageUrl: "/images/exposants/sebastienbonnet.png",
     conference: false,
+    atelier: true,
   },
   {
     name: "ROUSSIGNOL OLIVIER",
@@ -115,6 +138,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Fabrication de tambours et\nréalisation de séminaires chamaniques,\nséances biorésonance, lecture ‹ des\nénergies de naissance › et votre ‹\nétoile sacrée › avec les 22 arcanes\nmajeurs du tarot de marseille.",
     imageUrl: "/images/exposants/roussignololivier.png",
     conference: true,
+    atelier: false,
   },
   {
     name: "ROSELYNE MIEJAC",
@@ -122,6 +146,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Aromathérapeute\nphytothérapeute\nanimatrice sortie plantes sauvages",
     imageUrl: "/images/exposants/roselynemiejac.png",
     conference: false,
+    atelier: true,
   },
   {
     name: "ROSELINE SHIATSU",
@@ -129,6 +154,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Praticienne shiatsu et massage tuina (shiatsu sur chaise)",
     imageUrl: "/images/exposants/roselineshiatsu.png",
     conference: false,
+    atelier: false,
   },
   {
     name: "PATRICIA VEZZARO",
@@ -136,6 +162,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     description: "Shiatsu humain\nMassage sensitif® de bien-être",
     imageUrl: "/images/exposants/patriciavezzaro.png",
     conference: true,
+    atelier: true,
   },
   {
     "name": "BISSUEL SANDRA",
@@ -143,6 +170,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Naturopathie – méthode Bye Bye Allergies – consultation et formation Fleurs de Bach – ateliers huiles essentielles (thématique)",
     "imageUrl": "/images/exposants/bissuelsandra.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "LES SPECIALITÉS DU VELAY - ANNIE BOISSONNEAU",
@@ -150,6 +178,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Vente de minéraux et de bijoux en pierres naturelles.",
     "imageUrl": "/images/exposants/annieboissonneau.png",
     conference: true,
+    atelier: false,
   },
   {
     "name": "MAGNÉTIX/ PERRON MICHÈLE",
@@ -157,6 +186,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Bijoux et accessoires magnétiques, arbres de vie, parfum Shogan.",
     "imageUrl": "/images/exposants/perronmichele.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "AINSI SOI M'AIME - MICHELI PAULINE",
@@ -164,6 +194,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Conseil en image et diététique, produits exposés à la vente : infusions / thé, bons cadeaux.",
     "imageUrl": "/images/exposants/michelipauline.png",
     conference: true,
+    atelier: false,
   },
   {
     "name": "MASSAGE SPORTIF - CHRISTIAN MARTEL",
@@ -171,6 +202,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Praticien certifié.",
     "imageUrl": "/images/exposants/christianmartel.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "LA VOIE D'ARTÉMIS / BIEN ÊTRE FEMININ",
@@ -178,6 +210,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "La voie d'Artémis est dédiée à l'accompagnement et au bien être féminin afin de soutenir chacune à travers les différents grands passages de la vie : puberté, cycle menstruel et problématiques féminines (endométriose, SOPK, SPM…), préconception, grossesse, postnatal, deuil périnatal, ménopause, fin de vie…",
     "imageUrl": "/images/exposants/lavoiedartemis.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "LA VOIX DES METAMORPH'OSES / HYPNOTHÉRAPEUTE",
@@ -185,6 +218,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Accompagnement en libérations émotionnelles et harmonisation énergétique à l'aide de la médecine chinoise",
     "imageUrl": "/images/exposants/lavoixdesmetamorphoses.png",
     conference: true,
+    atelier: false,
   },
   {
     "name": "LAROUER JULIE",
@@ -192,13 +226,15 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Encens parfumé à faible émission de carbone – cône de fumigation, bougie aromathérapie – bijoux et porte encens céramique. Tout est fait main.",
     "imageUrl": "/images/exposants/larouerjulie.png",
     conference: false,
+    atelier: false,
   },
   {
-    "name": "HYPNOBLISS",
+    "name": "JESSICA HASSINE / HYPNOBLISS",
     "activity": "HYPNOTHÉRAPEUTE",
     "description": "Praticienne en hypnosespirituelle régressive (vie antérieure), praticienne en hypnose ericksonienne, animatrice constellation familiale/spirituelle/organisationnelle, thérapie brève systémique.",
     "imageUrl": "/images/exposants/hypnobliss.png",
-    conference: false,
+    conference: true,
+    atelier: true,
   },
   {
     "name": "HAMONIE CHINOISE",
@@ -206,6 +242,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Un accompagnement personnalisé autour du deuil et des grands passages de vie est proposé avec douceur, respect et profondeur.",
     "imageUrl": "/images/exposants/hamoniechinoise.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "CLAIR OBSCUR - FLORENCE NICOLAS",
@@ -213,6 +250,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Cours de yoga, cours de tarot et guidances, copropriétaire du gîte Naya.",
     "imageUrl": "/images/exposants/florencenicolas.png",
     conference: false,
+    atelier: true,
   },
   {
     "name": "CARINE GORDIENKO",
@@ -220,6 +258,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Conseillère bien être, produits de compléments alimentaires 100% naturels (fruits - épices - racines - légumes) de la gamme Fitline (société PM Internationale)",
     "imageUrl": "/images/exposants/carinegordienko.png",
     conference: false,
+    atelier: false,
   },
   {
     "name": "AURÉLIEN BOITHIAS",
@@ -227,6 +266,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Hypnose thérapeutique, désensibilisation oculaire, accompagnement individuel et formation ennéagramme en ligne, développer la méditation spontanée (disponibilité sensorielle). RDV au cabinet et en ligne.",
     "imageUrl": "/images/exposants/aurelienboithias.png",
     conference: true,
+    atelier: false,
   },
   {
     "name": "AMBRE",
@@ -234,7 +274,33 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
     "description": "Accompagnement de l'humain et l'animal notamment dans sa relation pour plus de compréhension mutuelle, d'harmonie et de mieux être sur tous les plans grâce à la communication animale, les soins énergétiques individuels ou en duo, la naturopathie animale et les élixirs floraux et le tambour.",
     "imageUrl": "/images/exposants/ambre.png",
     conference: false,
-  }
+    atelier: true,
+  },
+  {
+    "name": "SCIACCA LUDIVINE",
+    "activity": "LOVADIA BEAUTÉ DES ONGLES",
+    "description": "Prothésie ongulaire, nail art, vente de bijoux personnalisés",
+    "imageUrl": "/images/exposants/sciaccaludivine.png",
+    conference: false,
+    atelier: false,
+  },
+  {
+    "name": "AUDREY GONZALEZ",
+    "activity": "SOPHROLOGUE",
+    "description": "Sophrologue & coach de vie spécialisée sommeil, gestion du stress et de l’anxiété",
+    "imageUrl": "/images/exposants/audreygonzalez.png",
+    conference: false,
+    atelier: true,
+  },
+  {
+    "name": "CHIZOUKOU / TAKAKO ONODERA-REISS",
+    "activity": "BIJOUX ORIGAMI",
+    "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel, puis protégés par une résine UV. Chizoukou signifie « goutte d’eau » – symbole de délicatesse et de légèreté.",
+    "imageUrl": "/images/exposants/chizoukou.jpg",
+    conference: false,
+    atelier: false,
+  },
+  
 ];
 
 export default function Exposants() {
@@ -254,13 +320,6 @@ export default function Exposants() {
                     height={128}
                     className="w-24 h-32 object-cover rounded" 
                   />
-                  {exposant.conference && (
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded shadow-md">
-                        CONFERENCE
-                      </span>
-                    </div>
-                  )}
                 </div>
               ) : (
                 <svg width="96" height="128" viewBox="0 0 96 128" fill="none">
@@ -270,11 +329,25 @@ export default function Exposants() {
                 </svg>
               )}
             </div>
-            <div>
+            <div className="flex-1">
               <div className="font-serif text-lg font-semibold mb-2">
                 {exposant.name} - {exposant.activity}
               </div>
-              <div className="text-sm whitespace-pre-line">{exposant.description}</div>
+              <div className="text-sm whitespace-pre-line mb-4">{exposant.description}</div>
+              
+              {/* バッジを右下に配置 */}
+              <div className="flex gap-2 justify-end">
+                {exposant.conference && (
+                  <span className="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded shadow-md">
+                    CONFERENCE
+                  </span>
+                )}
+                {exposant.atelier && (
+                  <span className="bg-amber-200 text-emerald-700 text-xs font-bold px-2 py-1 rounded shadow-md">
+                    ATELIER
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         ))}
