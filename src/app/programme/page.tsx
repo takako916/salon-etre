@@ -23,7 +23,7 @@ const programmeData = {
              {
          "time": "20h00 -",
          "type": "CONFÉRENCE",
-         "organizer": "Chrisrtine Climéno",
+         "organizer": "Christine Clémino",
          "description": "Expérience de mort Imminente : Quand l'ombre rencontre la lumière (entrée 5€)",
          "imageUrl": "/images/programme/conf_2.png",
          "place": null
@@ -37,7 +37,7 @@ const programmeData = {
         "time": "10h00-11h00",
         "type": "ATELIER",
         "organizer": "Tym Amandine",
-        "description": "atelier de méditation et pratique corporelle",
+                 "description": "Atelier de méditation et pratique corporelle",
         "imageUrl": "/images/programme/atelier_1.png",
         "place": "Salle de l'instant présent"
       },
@@ -53,7 +53,7 @@ const programmeData = {
         "time": "11h00-12h00",
         "type": "CONFÉRENCE",
         "organizer": "Médiumnité - Mme Chevalier Delphine",
-        "description": "Lumiére de l'au-delà : Ce que vos êtres chers souhaitent vous dire",
+                 "description": "Lumière de l'au-delà : Ce que vos êtres chers souhaitent vous dire",
         "imageUrl": "/images/programme/conf_8.png",
         "place": "Salle du temps sérénité"
       },
@@ -61,7 +61,7 @@ const programmeData = {
         "time": "13h00-14h00",
         "type": "CONFÉRENCE",
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
-        "description": "Pésentation du Shiatsu",
+                 "description": "Présentation du Shiatsu",
         "imageUrl": null,
         "place": "Salle du temps sérénité"
       },
@@ -76,8 +76,8 @@ const programmeData = {
       {
         "time": "14h00-15h00",
         "type": "ATELIER",
-        "organizer": "Audrey Gonzalez - Sophrologue & coach de viie - spécialisée dans les troubles du sommeil, la gestion du streess et l'anxiété",
-        "description": "Atelier de sophrologie sur le sommeil - Mieux dormir pour mieux Vivre",
+                 "organizer": "Audrey Gonzalez - Sophrologue & coach de vie - spécialisée dans les troubles du sommeil, la gestion du stress et l'anxiété",
+                 "description": "Atelier de sophrologie sur le sommeil - Mieux dormir pour mieux vivre",
         "imageUrl": null,
         "place": "Salle de l'instant présent"
       },
@@ -101,7 +101,7 @@ const programmeData = {
         "time": "16h00-17h00",
         "type": "CONFÉRENCE",
         "organizer": "Patricia vezzaro - shiatsu humain / animalier / et massage sensitif® de bien-être",
-        "description": "Le Shiastsu un art du toucher pour tous",
+                 "description": "Le Shiatsu un art du toucher pour tous",
         "imageUrl": null,
         "place": "Salle du temps sérénité"
       },
@@ -116,7 +116,7 @@ const programmeData = {
       {
         "time": "17h00-18h00",
         "type": "CONFÉRENCE",
-        "organizer": "Séxothérapeute - Lauriane Cydzik",
+                 "organizer": "Sexothérapeute - Lauriane Cydzik",
         "description": "Erotiser sa vie = Amour et sexualité",
         "imageUrl": "/images/programme/conf_9.png",
         "place": "Salle du temps sérénité"
@@ -125,7 +125,7 @@ const programmeData = {
         "time": "17h00-18h00",
         "type": "ATELIER",
         "organizer": "Jessica Hassine - Hypnobliss",
-        "description": "Constelation familiale en pratique",
+                 "description": "Constellation familiale en pratique",
         "imageUrl": "/images/programme/atelier_4.png",
         "place": null
       },
@@ -218,7 +218,7 @@ const programmeData = {
       {
         "time": "16h00-17h00",
         "type": "CONFÉRENCE",
-        "organizer": "Aurelien Boithias - Hypnoses & désensibilisation occulaire",
+                 "organizer": "Aurelien Boithias - Hypnoses & désensibilisation oculaire",
         "description": "L'enneagramme : Et le travail thérapeutique",
         "imageUrl": "/images/programme/conf_4.png",
         "place": "Salle du temps sérénité"
