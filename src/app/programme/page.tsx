@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: "Programme | Salon de l'être Blavozy 2025",
@@ -14,17 +15,303 @@ export const metadata: Metadata = {
   },
 };
 
+// プログラムデータ（JSONで管理）
+const programmeData = {
+  "vendredi10octobre": {
+    "date": "vendredi 10 octobre",
+    "events": [
+             {
+         "time": "20h00 -",
+         "type": "CONFÉRENCE",
+         "organizer": "Chrisrtine Climéno",
+         "description": "Expérience de mort Imminente : Quand l'ombre rencontre la lumière (entrée 5€)",
+         "imageUrl": "/images/programme/conf_2.png",
+         "place": null
+       }
+    ]
+  },
+  "samedi11octobre": {
+    "date": "samedi 11 octobre",
+    "events": [
+      {
+        "time": "10h00-11h00",
+        "type": "ATELIER",
+        "organizer": "Tym Amandine",
+        "description": "atelier de méditation et pratique corporelle",
+        "imageUrl": "/images/programme/atelier_1.png",
+        "place": "Salle de l'instant présent"
+      },
+      {
+        "time": "10h00-11h00",
+        "type": "CONFÉRENCE",
+        "organizer": "L'Éveil Matriciel - M.Rossignol Olivier",
+        "description": "La roue de Médecine et les vibrations du Tambour",
+        "imageUrl": "/images/programme/conf_1.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "11h00-12h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Médiumnité - Mme Chevalier Delphine",
+        "description": "Lumiére de l'au-delà : Ce que vos êtres chers souhaitent vous dire",
+        "imageUrl": "/images/programme/conf_8.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "13h00-14h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Delphine Shiatsu43 - Delphine Gire",
+        "description": "Pésentation du Shiatsu",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "14h00-15h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Ainsi Soi m'aime - Micheli Pauline",
+        "description": "Découvrez Ainsi soi m'aime \"Allier l'être et le paraitre\"",
+        "imageUrl": "/images/programme/conf_12.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "14h00-15h00",
+        "type": "ATELIER",
+        "organizer": "Audrey Gonzalez - Sophrologue & coach de viie - spécialisée dans les troubles du sommeil, la gestion du streess et l'anxiété",
+        "description": "Atelier de sophrologie sur le sommeil - Mieux dormir pour mieux Vivre",
+        "imageUrl": null,
+        "place": "Salle de l'instant présent"
+      },
+      {
+        "time": "15h00-16h00",
+        "type": "ATELIER",
+        "organizer": "Roselyne Miejac - Naturopathie / Ayurvéda",
+        "description": "Découverte des plantes sauvages comestibles en Automne",
+        "imageUrl": "/images/programme/atelier_2.png",
+        "place": "Départ devant le centre culturel"
+      },
+      {
+        "time": "15h00-16h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Les spécialités du Velay",
+        "description": "Pierres de protection - Trousse de secours",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "16h00-17h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Patricia vezzaro - shiatsu humain / animalier / et massage sensitif® de bien-être",
+        "description": "Le Shiastsu un art du toucher pour tous",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "16h00-17h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Morgan Emica",
+        "description": "S’ouvrir à son identité profonde",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "17h00-18h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Séxothérapeute - Lauriane Cydzik",
+        "description": "Erotiser sa vie = Amour et sexualité",
+        "imageUrl": "/images/programme/conf_9.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "17h00-18h00",
+        "type": "ATELIER",
+        "organizer": "Jessica Hassine - Hypnobliss",
+        "description": "Constelation familiale en pratique",
+        "imageUrl": "/images/programme/atelier_4.png",
+        "place": null
+      },
+      {
+        "time": "18h00-19h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Véronique Verove - Numérologie",
+        "description": "Numérologie Humaniste \"Et si votre date de naissance racontait votre histoire\"",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "18h00-19h00",
+        "type": "CONFÉRENCE",
+        "organizer": "La voix des Métamorph'Oses - Coniasse Laura",
+        "description": "Quels sont les blocages conscients et inconscients que l'on parle en soi ?  Comment s'en libérer ?",
+        "imageUrl": "/images/programme/conf_7.png",
+        "place": "Salle de l'instant présent"
+      }
+    
+    ]
+  },
+  "dimanche12octobre": {
+    "date": "dimanche 12 octobre",
+    "events": [
+      {
+        "time": "10h00-11h00",
+        "type": "ATELIER",
+        "organizer": "Clair Obscur - Florence Nicolas",
+        "description": "Réveiller son intuition avec le Tarot",
+        "imageUrl": "/images/programme/atelier_3.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "11h00-12h00",
+        "type": "ATELIER",
+        "organizer": "CTME - Cabinet Thérapie Manuelle et énergétique - Bonnet Sébastien",
+        "description": "Traitement de la douleur en énergétique traditionnelle Chinoise",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "11h00-12h00",
+        "type": "ATELIER",
+        "organizer": "Sophrologue - Audrey Gonzalez",
+        "description": "Mieux dormir pour mieux vivre",
+        "imageUrl": "/images/programme/conf_13.png",
+        "place": "Salle de l'instant présent"
+      },
+      {
+        "time": "13h00-14h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Delphine Shiatsu43 - Delphine Gire",
+        "description": "Présentation du Shiatsu",
+        "imageUrl": "/images/programme/conf_11.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "14h00-15h00",
+        "type": "ATELIER",
+        "organizer": "Patricia vezzaro & Pascale Burger - (Association Cheval cœur à cœur)",
+        "description": "Voyage au tambour chamanique",
+        "imageUrl": "/images/programme/conf_3.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "14h00-15h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Jessica Hassine - Hypnobliss",
+        "description": "Constellation familiale présentation",
+        "imageUrl": "/images/programme/conf_10.png",
+        "place": null
+      },
+      {
+        "time": "15h00-16h00",
+        "type": "ATELIER",
+        "organizer": "Roselyne Miejac - Naturopathie / Ayurvéda",
+        "description": "Découverte des plantes sauvages comestibles en Automne",
+        "imageUrl": null,
+        "place": "Départ devant le centre culturel"
+      },
+      {
+        "time": "15h00-16h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Les spécialités du Velay",
+        "description": "Pierres de protection",
+        "imageUrl": "/images/programme/conf_5.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "16h00-17h00",
+        "type": "CONFÉRENCE",
+        "organizer": "Aurelien Boithias - Hypnoses & désensibilisation occulaire",
+        "description": "L'enneagramme : Et le travail thérapeutique",
+        "imageUrl": "/images/programme/conf_4.png",
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "17h00-18h00",
+        "type": "ATELIER",
+        "organizer": "Delphine Shiatsu43 - Delphine Gire",
+        "description": "Auto massage Do In",
+        "imageUrl": null,
+        "place": "Salle du temps sérénité"
+      },
+      {
+        "time": "17h00-18h00",
+        "type": "ATELIER",
+        "organizer": "Morgan Emica",
+        "description": "Vivre son identité en conscience. Retrouver sa place et affirmer ses limites. Comprendre nos mécanismes inconscients pour poser des limites saines, pour soi et pour le monde.",
+        "imageUrl": "/images/programme/conf_6.png",
+        "place": "Salle de l'instant présent"
+      }
+    
+    ]
+  }
+};
+
 export default function Programme() {
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
       <h1 className="text-center text-xl text-[#218393] mb-8 font-playfair">
         Programme Salon de l&apos;être Blavozy 2025
       </h1>
-      <div className="min-h-[60vh] flex items-center justify-center bg-[#fcf7ea] rounded-xl m-8">
-        <span className="text-xl md:text-2xl text-[#218393] font-medieval text-center">
-          Plus d&apos;informations à venir très bientôt !
-        </span>
-      </div>
+      
+      {/* 各日のセクション */}
+      {Object.entries(programmeData).map(([dayKey, dayData]) => (
+        <div key={dayKey} className="mb-8">
+          {/* 日付ヘッダー */}
+          <h2 className="text-center text-lg text-[#218393] mb-4 font-playfair">
+            {dayData.date}
+          </h2>
+          
+          {/* イベントリスト */}
+          <div className="space-y-4">
+            {dayData.events.map((event, index) => (
+              <div key={index} className="bg-amber-50 border border-emerald-700 rounded-lg p-6">
+                <div className="flex gap-6">
+                  {/* 左側：イベント情報 */}
+                  <div className="flex-1">
+                                         {/* 時間、バッジ、場所 */}
+                     <div className="flex items-center gap-3 mb-3">
+                       <span className="text-lg font-semibold text-emerald-700">
+                         {event.time}
+                       </span>
+                                               <span className={`text-xs font-bold px-2 py-1 rounded shadow-md ${
+                          event.type === "CONFÉRENCE"
+                            ? "bg-orange-600 text-white" 
+                            : "bg-amber-200 text-emerald-700"
+                        }`}>
+                          {event.type}
+                        </span>
+                       {event.place && (
+                         <span className="text-xs text-emerald-600 font-medium px-2 py-1 bg-emerald-50 border border-emerald-200 rounded">
+                           📍 {event.place}
+                         </span>
+                       )}
+                     </div>
+                    
+                                         {/* 主催者と説明を1列に */}
+                     <div className="text-gray-700 leading-relaxed">
+                       <span className="text-lg font-semibold text-emerald-700">
+                         {event.organizer}
+                       </span>
+                       <span className="ml-2">- {event.description}</span>
+                     </div>
+                  </div>
+                  
+                  {/* 右側：写真（存在する場合のみ）- デスクトップのみ表示 */}
+                  {event.imageUrl && (
+                    <div className="hidden md:block flex-shrink-0">
+                      <Image 
+                        src={event.imageUrl} 
+                        alt={event.organizer} 
+                        width={160}
+                        height={120}
+                        className="w-40 h-30 object-cover rounded shadow-md" 
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 } 

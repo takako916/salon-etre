@@ -337,7 +337,7 @@ export default function Exposants() {
               <div className="flex gap-2 justify-end">
                 {exposant.conference && (
                   <span className="bg-orange-600 text-white text-xs font-bold px-2 py-1 rounded shadow-md">
-                    CONFERENCE
+                    CONFÉRENCE
                   </span>
                 )}
                 {exposant.atelier && (
