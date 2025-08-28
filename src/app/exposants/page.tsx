@@ -294,7 +294,7 @@ La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être 
   {
     "name": "CHIZOUKOU / TAKAKO ONODERA-REISS",
     "activity": "BIJOUX ORIGAMI",
-    "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel, puis protégés par une résine UV. Chizoukou signifie « goutte d’eau » – symbole de délicatesse et de légèreté.",
+    "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel. Chizoukou signifie « goutte d’eau » – symbole de délicatesse et de légèreté.",
     "imageUrl": "/images/exposants/chizoukou.jpg",
     conference: false,
     atelier: false,
