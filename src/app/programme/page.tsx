@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: "Programme | Salon de l'être Blavozy 2025",
@@ -254,10 +255,12 @@ export default function Programme() {
       {/* 各日のセクション */}
       {Object.entries(programmeData).map(([dayKey, dayData]) => (
         <div key={dayKey} className="mb-8">
-          {/* 日付ヘッダー */}
-          <h2 className="text-center text-lg text-[#218393] mb-4 font-playfair font-bold flex items-center justify-center gap-2">
-            📅 {dayData.date}
-          </h2>
+          {/* 日付ヘッダー - スティッキー */}
+          <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-emerald-200 py-3 mb-4 shadow-sm">
+            <h2 className="text-center text-lg text-[#218393] font-playfair font-bold flex items-center justify-center gap-2">
+              📅 {dayData.date}
+            </h2>
+          </div>
           
           {/* イベントリスト */}
           <div className="space-y-4">
@@ -312,6 +315,8 @@ export default function Programme() {
           </div>
         </div>
       ))}
+      
+      <ScrollToTop />
     </div>
   );
 } 

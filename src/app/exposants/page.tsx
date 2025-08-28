@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: "Exposants Salon de l'être Blavozy 2025 | Bien-être Haute-Loire",
@@ -350,6 +351,7 @@ export default function Exposants() {
           </div>
         ))}
       </div>
+      <ScrollToTop />
     </div>
   );
 } 
