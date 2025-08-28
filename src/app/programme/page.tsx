@@ -255,8 +255,8 @@ export default function Programme() {
       {Object.entries(programmeData).map(([dayKey, dayData]) => (
         <div key={dayKey} className="mb-8">
           {/* 日付ヘッダー */}
-          <h2 className="text-center text-lg text-[#218393] mb-4 font-playfair">
-            {dayData.date}
+          <h2 className="text-center text-lg text-[#218393] mb-4 font-playfair font-bold flex items-center justify-center gap-2">
+            📅 {dayData.date}
           </h2>
           
           {/* イベントリスト */}
