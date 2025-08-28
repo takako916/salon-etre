@@ -62,7 +62,7 @@ const programmeData = {
         "type": "CONFÉRENCE",
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
                  "description": "Présentation du Shiatsu",
-        "imageUrl": null,
+        "imageUrl": "/images/programme/conf_14.png",
         "place": "Salle du temps sérénité"
       },
       {
@@ -100,7 +100,7 @@ const programmeData = {
       {
         "time": "16h00-17h00",
         "type": "CONFÉRENCE",
-        "organizer": "Patricia vezzaro - shiatsu humain / animalier / et massage sensitif® de bien-être",
+        "organizer": "Patricia Vezzaro - Shiatsu humain / animalier / et massage sensitif® de bien-être",
                  "description": "Le Shiatsu un art du toucher pour tous",
         "imageUrl": null,
         "place": "Salle du temps sérénité"
@@ -186,7 +186,7 @@ const programmeData = {
       {
         "time": "14h00-15h00",
         "type": "ATELIER",
-        "organizer": "Patricia vezzaro & Pascale Burger - (Association Cheval cœur à cœur)",
+        "organizer": "Patricia Vezzaro & Pascale Burger - (Association Cheval cœur à cœur)",
         "description": "Voyage au tambour chamanique",
         "imageUrl": "/images/programme/conf_3.png",
         "place": "Salle du temps sérénité"
