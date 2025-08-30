@@ -26,16 +26,6 @@ const exposants = [
     atelier: false,
   },
   {
-    name: "HELIE ANNE",
-    activity: "DANSE DE L'ÊTRE",
-    description: `Danse ô cœur de soi : connexion aux 5 éléments.
-Un moment de mouvement libre et accompagnée par ma voix pour vibrer la terre, l'eau, le feu, l'air et l'éther.
-La danse de l'Être® permet de se recentrer et libérer ce qui demande d'être exprimé, dans la bienveillance et la joie du corps, du cœur.`,
-    imageUrl: "/images/exposants/helieanne.png",
-    conference: false,
-    atelier: false,
-  },
-  {
     name: "LYDIE CLERC",
     activity: " KINÉSIOLOGUE ET PRATICIENNE EFT",
     description: "Grâce à un test musculaire, la kinésiologie permet d'avoir accès à des informations au niveau du corps.\nLe but : déceler et corriger les déséquilibres et les stress d'origine physique, mentale et émotionnelle.",
