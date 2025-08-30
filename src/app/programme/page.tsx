@@ -142,7 +142,7 @@ const programmeData = {
         "time": "18h00-19h00",
         "type": "CONFÉRENCE",
         "organizer": "La voix des Métamorph'Oses - Coniasse Laura",
-        "description": "Quels sont les blocages conscients et inconscients que l'on parle en soi ?  Comment s'en libérer ?",
+        "description": "Quels sont les blocages conscients et inconscients que l'on porte en soi ?  Comment s'en libérer ?",
         "imageUrl": "/images/programme/conf_7.png",
         "place": "Salle de l'instant présent"
       }
