@@ -281,6 +281,12 @@ const exposants = [
     conference: false,
     atelier: false,
   },
+  {
+    "name": "JULIE BOUTOULLE",
+    "activity": "SERVICE DE MASSAGE",
+    "description": "Massage holistique : Tui Na, Chi Nei Tsang, Hinokibo, MM crânien – un toucher réconfortant pour un regain d’énergie",
+    "imageUrl": "/images/exposants/julieboutoulle.png"
+  }
   
 ];
 
