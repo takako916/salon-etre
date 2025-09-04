@@ -274,14 +274,6 @@ const exposants = [
     atelier: false,
   },
   {
-    "name": "AUDREY GONZALEZ",
-    "activity": "SOPHROLOGUE",
-    "description": "Sophrologue & coach de vie spécialisée sommeil, gestion du stress et de l’anxiété",
-    "imageUrl": "/images/exposants/audreygonzalez.png",
-    conference: false,
-    atelier: true,
-  },
-  {
     "name": "CHIZOUKOU / TAKAKO ONODERA-REISS",
     "activity": "BIJOUX ORIGAMI",
     "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel. Chizoukou signifie « goutte d’eau » – symbole de délicatesse et de légèreté.",
