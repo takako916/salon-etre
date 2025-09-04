@@ -1,20 +1,8 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import ScrollToTop from '@/components/ScrollToTop';
-
-export const metadata: Metadata = {
-  title: "Exposants Salon de l'être Blavozy 2025 | Bien-être Haute-Loire",
-  description: "Exposants Salon de l'être 2025 : massage, réflexologie, kinésiologie, magnétisme, sexothérapie, cartomancie. +40 professionnels à Blavozy.",
-  keywords: "exposants salon bien-être, massage Blavozy, réflexologie, kinésiologie, magnétiseur, sexothérapie, cartomancie, art thérapie, bien-être Haute-Loire",
-  openGraph: {
-    title: "Exposants Salon de l'être Blavozy 2025",
-    description: "+40 professionnels du bien-être et du développement personnel",
-    url: "https://salon-etre.vercel.app/exposants",
-  },
-  alternates: {
-    canonical: "https://salon-etre.vercel.app/exposants",
-  },
-};
+import { useState, useMemo } from 'react';
 
 const exposants = [
   {
@@ -276,7 +264,7 @@ const exposants = [
   {
     "name": "CHIZOUKOU / TAKAKO ONODERA-REISS",
     "activity": "BIJOUX ORIGAMI",
-    "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel. Chizoukou signifie « goutte d’eau » – symbole de délicatesse et de légèreté.",
+    "description": "Bijoux en origami pliés à la main à partir de papier japonais traditionnel. Chizoukou signifie « goutte d'eau » – symbole de délicatesse et de légèreté.",
     "imageUrl": "/images/exposants/chizoukou.jpg",
     conference: false,
     atelier: false,
@@ -284,24 +272,167 @@ const exposants = [
   {
     "name": "JULIE BOUTOULLE",
     "activity": "SERVICE DE MASSAGE",
-    "description": "Massage holistique : Tui Na, Chi Nei Tsang, Hinokibo, MM crânien – un toucher réconfortant pour un regain d’énergie",
-    "imageUrl": "/images/exposants/julieboutoulle.png"
+    "description": "Massage holistique : Tui Na, Chi Nei Tsang, Hinokibo, MM crânien – un toucher réconfortant pour un regain d'énergie",
+    "imageUrl": "/images/exposants/julieboutoulle.png",
+    conference: false,
+    atelier: false,
   },
   {
     "name": "MAURY JEANNE",
     "activity": "REBOUTOLOGUE",
     "description": "Cabinet Maury",
-    "imageUrl": "/images/exposants/mauryjeanne.png"
-  }
-  
+    "imageUrl": "/images/exposants/mauryjeanne.png",
+    conference: false,
+    atelier: false,
+  },
+  {
+    "name": "CORINNE DRUVET",
+    "activity": "SONOTHÉRAPEUTE & ACCOMPAGNANTE",
+    "description": "Oser sa voix – Ateliers & stages, massage et sonothérapie, accompagnement à la naissance et postnatal",
+    "imageUrl": "/images/exposants/corinnedruvet.png",
+    conference: false,
+    atelier: true,
+  },
+  {
+    "name": "BENJAMIN BLANC",
+    "activity": "CRISTAUX43",
+    "description": "Fabrication de bijoux et pierres polies de Haute-Loire. Vente de minéraux bruts de Haute-Loire et d'ailleurs. Conseils en lithothérapie.",
+    "imageUrl": "/images/exposants/benjaminblanc.png",
+    conference: false,
+    atelier: false,
+  },
+  {
+    "name": "GIBAUD PATRICIA",
+    "activity": "COIFFEUSE ÉNERGÉTICIENNE, TRICHOTHÉRAPIE",
+    "description": "Trichothérapie : équilibre du corps et de l'esprit, repousse et brillance. Shiatsu crânien, Shiro Abhyanga. Harmonisation, équilibre, détox capillaire (purifie, oxygène).",
+    "imageUrl": "/images/exposants/gibaudpatricia.png",
+    conference: false,
+    atelier: false,
+  }  
 ];
 
 export default function Exposants() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('all');
+
+  const filteredExposants = useMemo(() => {
+    return exposants.filter(exposant => {
+      const matchesSearch = 
+        exposant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        exposant.activity.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        exposant.description.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesFilter = 
+        selectedFilter === 'all' ||
+        (selectedFilter === 'conference' && exposant.conference) ||
+        (selectedFilter === 'atelier' && exposant.atelier) ||
+        (selectedFilter === 'neither' && !exposant.conference && !exposant.atelier);
+      
+      return matchesSearch && matchesFilter;
+    });
+  }, [searchTerm, selectedFilter]);
+
   return (
     <div className="max-w-5xl mx-auto py-8 px-2">
       <h1 className="text-center text-xl text-[#218393] mb-8 font-playfair">Liste des exposants 2025</h1>
+      
+      {/* 検索とフィルターセクション */}
+      <div className="mb-8 space-y-4">
+        {/* 検索窓 */}
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Rechercher un exposant, une activité..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-4 py-3 pl-12 border border-emerald-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent bg-white"
+          />
+          <svg
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+
+        {/* フィルターボタン */}
+        <div className="flex flex-wrap gap-2 justify-center">
+          <button
+            onClick={() => setSelectedFilter('all')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              selectedFilter === 'all'
+                ? 'bg-emerald-700 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Tous
+          </button>
+          <button
+            onClick={() => setSelectedFilter('conference')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              selectedFilter === 'conference'
+                ? 'bg-orange-600 text-white'
+                : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
+            }`}
+          >
+            Conférences
+          </button>
+          <button
+            onClick={() => setSelectedFilter('atelier')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              selectedFilter === 'atelier'
+                ? 'bg-amber-400 text-emerald-700'
+                : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+            }`}
+          >
+            Ateliers
+          </button>
+          <button
+            onClick={() => setSelectedFilter('neither')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              selectedFilter === 'neither'
+                ? 'bg-gray-700 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Exposants uniquement
+          </button>
+        </div>
+
+        {/* 検索結果数表示 */}
+        <div className="text-center text-gray-600">
+          {filteredExposants.length} exposant{filteredExposants.length > 1 ? 's' : ''} trouvé{filteredExposants.length > 1 ? 's' : ''}
+        </div>
+      </div>
+
+      {/* 検索結果がない場合のメッセージ */}
+      {filteredExposants.length === 0 && (
+        <div className="text-center py-12">
+          <div className="text-gray-500 text-lg mb-4">
+            Aucun exposant ne correspond à votre recherche
+          </div>
+          <button
+            onClick={() => {
+              setSearchTerm('');
+              setSelectedFilter('all');
+            }}
+            className="px-6 py-2 bg-emerald-700 text-white rounded-lg hover:bg-emerald-800 transition-colors"
+          >
+            Réinitialiser la recherche
+          </button>
+        </div>
+      )}
+
+      {/* エクスポザンカード */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {exposants.map((exposant, i) => (
+        {filteredExposants.map((exposant, i) => (
           <div key={i} className="flex bg-[#fcf7ea] border border-emerald-700 rounded p-6 items-center gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex-shrink-0">
               {exposant.imageUrl ? (

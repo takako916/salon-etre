@@ -4,6 +4,7 @@ import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 import Breadcrumb from "@/components/Breadcrumb";
 import Script from "next/script";
+import ConditionalBanner from "@/components/ConditionalBanner";
 
 export const metadata = {
   metadataBase: new URL('https://salon-etre.vercel.app'),
@@ -151,7 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })(window,document,'script','dataLayer','GTM-PKV7BJV5');
           `}
         </Script>
-        <Banner />
+        <ConditionalBanner />
         <Navbar />
         <Breadcrumb />
         {children}
