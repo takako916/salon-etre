@@ -286,6 +286,12 @@ const exposants = [
     "activity": "SERVICE DE MASSAGE",
     "description": "Massage holistique : Tui Na, Chi Nei Tsang, Hinokibo, MM crânien – un toucher réconfortant pour un regain d’énergie",
     "imageUrl": "/images/exposants/julieboutoulle.png"
+  },
+  {
+    "name": "MAURY JEANNE",
+    "activity": "REBOUTOLOGUE",
+    "description": "Cabinet Maury",
+    "imageUrl": "/images/exposants/mauryjeanne.png"
   }
   
 ];
