@@ -286,7 +286,7 @@ const exposants = [
     atelier: false,
   },
   {
-    "name": "CORINNE DRUVET",
+    "name": "CORINNE DREVET",
     "activity": "SONOTHÉRAPEUTE & ACCOMPAGNANTE",
     "description": "Oser sa voix – Ateliers & stages, massage et sonothérapie, accompagnement à la naissance et postnatal",
     "imageUrl": "/images/exposants/corinnedruvet.png",
@@ -325,8 +325,7 @@ export default function Exposants() {
       const matchesFilter = 
         selectedFilter === 'all' ||
         (selectedFilter === 'conference' && exposant.conference) ||
-        (selectedFilter === 'atelier' && exposant.atelier) ||
-        (selectedFilter === 'neither' && !exposant.conference && !exposant.atelier);
+        (selectedFilter === 'atelier' && exposant.atelier);
       
       return matchesSearch && matchesFilter;
     });
@@ -382,7 +381,7 @@ export default function Exposants() {
                 : 'bg-orange-100 text-orange-700 hover:bg-orange-200'
             }`}
           >
-            Conférences
+            Conference
           </button>
           <button
             onClick={() => setSelectedFilter('atelier')}
@@ -392,17 +391,7 @@ export default function Exposants() {
                 : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
             }`}
           >
-            Ateliers
-          </button>
-          <button
-            onClick={() => setSelectedFilter('neither')}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              selectedFilter === 'neither'
-                ? 'bg-gray-700 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            Exposants uniquement
+            Atelier
           </button>
         </div>
 

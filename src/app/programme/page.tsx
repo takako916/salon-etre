@@ -76,9 +76,9 @@ const programmeData = {
       },
       {
         "time": "14h00-15h00",
-        "type": "ATELIER",
-                 "organizer": "Audrey Gonzalez - Sophrologue & coach de vie - spécialisée dans les troubles du sommeil, la gestion du stress et l'anxiété",
-                 "description": "Atelier de sophrologie sur le sommeil - Mieux dormir pour mieux vivre",
+        "type": "CONFÉRENCE",
+                 "organizer": "La voix des Métamorph'Oses - Coniasse Laura",
+                 "description": "Quels sont les blocages conscients et inconscients que l'on porte en soi ? Comment s'en libérer ?",
         "imageUrl": null,
         "place": "Salle de l'instant présent"
       },
@@ -140,10 +140,10 @@ const programmeData = {
       },
       {
         "time": "18h00-19h00",
-        "type": "CONFÉRENCE",
-        "organizer": "La voix des Métamorph'Oses - Coniasse Laura",
-        "description": "Quels sont les blocages conscients et inconscients que l'on porte en soi ?  Comment s'en libérer ?",
-        "imageUrl": "/images/programme/conf_7.png",
+        "type": "ATELIER",
+        "organizer": "Au cœur de soi - Massage et sonotherapie - Oser sa voix - Corinne Drevet",
+        "description": "Oser sa voix : Eploration du Corps Instrument, polyphonies et autres joyeuses surprises.",
+        "imageUrl": "/images/programme/atelier_5.png",
         "place": "Salle de l'instant présent"
       }
     
@@ -167,14 +167,6 @@ const programmeData = {
         "description": "Traitement de la douleur en énergétique traditionnelle Chinoise",
         "imageUrl": null,
         "place": "Salle du temps sérénité"
-      },
-      {
-        "time": "11h00-12h00",
-        "type": "ATELIER",
-        "organizer": "Sophrologue - Audrey Gonzalez",
-        "description": "Mieux dormir pour mieux vivre",
-        "imageUrl": "/images/programme/conf_13.png",
-        "place": "Salle de l'instant présent"
       },
       {
         "time": "13h00-14h00",
