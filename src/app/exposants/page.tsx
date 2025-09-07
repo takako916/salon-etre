@@ -6,6 +6,14 @@ import { useState, useMemo } from 'react';
 
 const exposants = [
   {
+    "name": "MARYLINE CHAURAND",
+    "activity": "ORGANISATION, RÉFLEXOLOGUE",
+    "description": "La réflexologie globale, pratique naturelle et l'aromathérapie sont des compléments à l'allopath.",
+    "imageUrl": "/images/exposants/marylinechaurand.jpg",
+    "conference": false,
+    "atelier": false
+  },
+  {
     "name": "CHRISTINE CLÉMINO",
     "activity": "CONFÉRENCE",
     "description": "Expérience de mort imminente – La vie après la vie. Vendredi 10 octobre à 20h00 (entrée 5€).",
