@@ -198,10 +198,10 @@ const exposants = [
     atelier: false,
   },
   {
-    "name": "LA VOIX DES METAMORPH'OSES / HYPNOTHÉRAPEUTE",
-    "activity": "LA VOIX DES METAMORPH'OSES / HYPNOTHÉRAPEUTE",
+    "name": "CONIASSE LAURA",
+    "activity": "LA VOIX DES METAMORPH'OSES",
     "description": "Accompagnement en libérations émotionnelles et harmonisation énergétique à l'aide de la médecine chinoise",
-    "imageUrl": "/images/exposants/lavoixdesmetamorphoses.png",
+    "imageUrl": "/images/exposants/lavoixdesmetamorphoses.jpg",
     conference: true,
     atelier: false,
   },
