@@ -27,7 +27,7 @@ const programmeData = {
          "organizer": "Christine Clémino",
          "description": "Expérience de mort Imminente : Quand l'ombre rencontre la lumière (entrée 5€)",
          "imageUrl": "/images/programme/conf_2.png",
-         "place": null
+         "place": "Salle cinéma"
        }
     ]
   },
@@ -48,7 +48,7 @@ const programmeData = {
         "organizer": "L'Éveil Matriciel - M.Rossignol Olivier",
         "description": "La roue de Médecine et les vibrations du Tambour",
         "imageUrl": "/images/programme/conf_1.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "11h00-12h00",
@@ -56,7 +56,7 @@ const programmeData = {
         "organizer": "Médiumnité - Mme Chevalier Delphine",
                  "description": "Lumière de l'au-delà : Ce que vos êtres chers souhaitent vous dire",
         "imageUrl": "/images/programme/conf_8.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "13h00-14h00",
@@ -64,7 +64,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
                  "description": "Présentation du Shiatsu",
         "imageUrl": "/images/programme/conf_14.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -72,7 +72,7 @@ const programmeData = {
         "organizer": "Ainsi Soi m'aime - Micheli Pauline",
         "description": "Découvrez Ainsi soi m'aime \"Allier l'être et le paraitre\"",
         "imageUrl": "/images/programme/conf_12.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -96,7 +96,7 @@ const programmeData = {
         "organizer": "Les spécialités du Velay",
         "description": "Pierres de protection - Trousse de secours",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -104,7 +104,7 @@ const programmeData = {
         "organizer": "Patricia Vezzaro - Shiatsu humain / animalier / et massage sensitif® de bien-être",
                  "description": "Le Shiatsu un art du toucher pour tous",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -112,7 +112,7 @@ const programmeData = {
         "organizer": "Morgan Emica",
         "description": "S’ouvrir à son identité profonde",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -120,7 +120,7 @@ const programmeData = {
                  "organizer": "Sexothérapeute - Lauriane Cydzik",
         "description": "Erotiser sa vie = Amour et sexualité",
         "imageUrl": "/images/programme/conf_9.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -136,7 +136,7 @@ const programmeData = {
         "organizer": "Véronique Verove - Numérologie",
         "description": "Numérologie Humaniste \"Et si votre date de naissance racontait votre histoire\"",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "18h00-19h00",
@@ -158,7 +158,7 @@ const programmeData = {
         "organizer": "Clair Obscur - Florence Nicolas",
         "description": "Réveiller son intuition avec le Tarot",
         "imageUrl": "/images/programme/atelier_3.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "11h00-12h00",
@@ -166,7 +166,7 @@ const programmeData = {
         "organizer": "CTME - Cabinet Thérapie Manuelle et énergétique - Bonnet Sébastien",
         "description": "Traitement de la douleur en énergétique traditionnelle Chinoise",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "13h00-14h00",
@@ -174,7 +174,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
         "description": "Présentation du Shiatsu",
         "imageUrl": "/images/programme/conf_11.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -182,7 +182,7 @@ const programmeData = {
         "organizer": "Patricia Vezzaro & Pascale Burger - (Association Cheval cœur à cœur)",
         "description": "Voyage au tambour chamanique",
         "imageUrl": "/images/programme/conf_3.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -206,7 +206,7 @@ const programmeData = {
         "organizer": "Les spécialités du Velay",
         "description": "Pierres de protection",
         "imageUrl": "/images/programme/conf_5.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -214,7 +214,15 @@ const programmeData = {
                  "organizer": "Aurelien Boithias - Hypnoses & désensibilisation oculaire",
         "description": "L'enneagramme : Et le travail thérapeutique",
         "imageUrl": "/images/programme/conf_4.png",
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
+      },
+      {
+        "time": "16h00-17h00",
+        "type": "CONFÉRENCE",
+                 "organizer": "Maryline Chaurand - Réflexologie et énergétique chinoise",
+        "description": "Réflexologie et diététique chinoise : ventre heureux, esprit tranquille !",
+        "imageUrl": null,
+        "place": "Salle cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -222,7 +230,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
         "description": "Auto massage Do In",
         "imageUrl": null,
-        "place": "Salle du temps sérénité"
+        "place": "Salle cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -243,6 +251,20 @@ export default function Programme() {
       <h1 className="text-center text-xl text-[#218393] mb-8 font-playfair">
         Programme Salon de l&apos;être Blavozy 2025
       </h1>
+      
+      {/* PDFダウンロードリンク */}
+      <div className="text-center mb-8">
+        <a 
+          href="/images/programme/salon-de-lêtre-VERSO-Flyer-2025.pdf" 
+          download="Programme-Salon-de-lêtre-Blavozy-2025.pdf"
+          className="inline-flex items-center gap-2 bg-[#218393] text-white px-6 py-3 rounded-lg hover:bg-[#1a6b7a] transition-colors duration-200 shadow-md hover:shadow-lg"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          📄 Télécharger le programme PDF
+        </a>
+      </div>
       
       {/* 各日のセクション */}
       {Object.entries(programmeData).map(([dayKey, dayData]) => (
@@ -290,7 +312,7 @@ export default function Programme() {
                   </div>
                   
                   {/* 右側：写真（存在する場合のみ）- デスクトップのみ表示 */}
-                  {event.imageUrl && (
+                  {event.imageUrl && event.imageUrl !== "null" && event.imageUrl !== null && (
                     <div className="hidden md:block flex-shrink-0">
                       <Image 
                         src={event.imageUrl} 
