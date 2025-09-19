@@ -128,7 +128,7 @@ const programmeData = {
         "organizer": "Jessica Hassine - Hypnobliss",
                  "description": "Constellation familiale en pratique",
         "imageUrl": "/images/programme/atelier_4.png",
-        "place": null
+        "place": "Salle de cinéma"
       },
       {
         "time": "18h00-19h00",
@@ -190,7 +190,7 @@ const programmeData = {
         "organizer": "Jessica Hassine - Hypnobliss",
         "description": "Constellation familiale présentation",
         "imageUrl": "/images/programme/conf_10.png",
-        "place": null
+        "place": "Salle de l'instant présent"
       },
       {
         "time": "15h00-16h00",
