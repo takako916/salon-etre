@@ -27,7 +27,7 @@ const programmeData = {
          "organizer": "Christine Clémino",
          "description": "Expérience de mort Imminente : Quand l'ombre rencontre la lumière (entrée 5€)",
          "imageUrl": "/images/programme/conf_2.png",
-         "place": "Salle cinéma"
+         "place": "Salle de cinéma"
        }
     ]
   },
@@ -48,7 +48,7 @@ const programmeData = {
         "organizer": "L'Éveil Matriciel - M.Rossignol Olivier",
         "description": "La roue de Médecine et les vibrations du Tambour",
         "imageUrl": "/images/programme/conf_1.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "11h00-12h00",
@@ -56,7 +56,7 @@ const programmeData = {
         "organizer": "Médiumnité - Mme Chevalier Delphine",
                  "description": "Lumière de l'au-delà : Ce que vos êtres chers souhaitent vous dire",
         "imageUrl": "/images/programme/conf_8.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "13h00-14h00",
@@ -64,7 +64,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
                  "description": "Présentation du Shiatsu",
         "imageUrl": "/images/programme/conf_14.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -72,7 +72,7 @@ const programmeData = {
         "organizer": "Ainsi Soi m'aime - Micheli Pauline",
         "description": "Découvrez Ainsi soi m'aime \"Allier l'être et le paraitre\"",
         "imageUrl": "/images/programme/conf_12.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -96,7 +96,7 @@ const programmeData = {
         "organizer": "Les spécialités du Velay",
         "description": "Pierres de protection - Trousse de secours",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -104,7 +104,7 @@ const programmeData = {
         "organizer": "Patricia Vezzaro - Shiatsu humain / animalier / et massage sensitif® de bien-être",
                  "description": "Le Shiatsu un art du toucher pour tous",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -112,7 +112,7 @@ const programmeData = {
         "organizer": "Morgan Emica",
         "description": "S’ouvrir à son identité profonde",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -120,7 +120,7 @@ const programmeData = {
                  "organizer": "Sexothérapeute - Lauriane Cydzik",
         "description": "Erotiser sa vie = Amour et sexualité",
         "imageUrl": "/images/programme/conf_9.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -136,7 +136,7 @@ const programmeData = {
         "organizer": "Véronique Verove - Numérologie",
         "description": "Numérologie Humaniste \"Et si votre date de naissance racontait votre histoire\"",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "18h00-19h00",
@@ -158,7 +158,7 @@ const programmeData = {
         "organizer": "Clair Obscur - Florence Nicolas",
         "description": "Réveiller son intuition avec le Tarot",
         "imageUrl": "/images/programme/atelier_3.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "11h00-12h00",
@@ -166,7 +166,7 @@ const programmeData = {
         "organizer": "CTME - Cabinet Thérapie Manuelle et énergétique - Bonnet Sébastien",
         "description": "Traitement de la douleur en énergétique traditionnelle Chinoise",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "13h00-14h00",
@@ -174,7 +174,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
         "description": "Présentation du Shiatsu",
         "imageUrl": "/images/programme/conf_11.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -182,7 +182,7 @@ const programmeData = {
         "organizer": "Patricia Vezzaro & Pascale Burger - (Association Cheval cœur à cœur)",
         "description": "Voyage au tambour chamanique",
         "imageUrl": "/images/programme/conf_3.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "14h00-15h00",
@@ -206,7 +206,7 @@ const programmeData = {
         "organizer": "Les spécialités du Velay",
         "description": "Pierres de protection",
         "imageUrl": "/images/programme/conf_5.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -214,7 +214,7 @@ const programmeData = {
                  "organizer": "Aurelien Boithias - Hypnoses & désensibilisation oculaire",
         "description": "L'enneagramme : Et le travail thérapeutique",
         "imageUrl": "/images/programme/conf_4.png",
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "16h00-17h00",
@@ -222,7 +222,7 @@ const programmeData = {
                  "organizer": "Maryline Chaurand - Réflexologie et énergétique chinoise",
         "description": "Réflexologie et diététique chinoise : ventre heureux, esprit tranquille !",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "17h00-18h00",
@@ -230,7 +230,7 @@ const programmeData = {
         "organizer": "Delphine Shiatsu43 - Delphine Gire",
         "description": "Auto massage Do In",
         "imageUrl": null,
-        "place": "Salle cinéma"
+        "place": "Salle de cinéma"
       },
       {
         "time": "17h00-18h00",
