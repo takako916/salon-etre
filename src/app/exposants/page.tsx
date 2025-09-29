@@ -14,6 +14,14 @@ const exposants = [
     "atelier": false
   },
   {
+    "name": "VICTOR MOUTBEKA - PRODUCTION DIRECTE",
+    "activity": "CONCEPTEUR D'ÉVÉNEMENT",
+    "description": "",
+    "imageUrl": "/images/exposants/moutbekavictor.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
     "name": "CHRISTINE CLÉMINO",
     "activity": "CONFÉRENCE",
     "description": "Expérience de mort imminente – La vie après la vie. Vendredi 10 octobre à 20h00 (entrée 5€).",
@@ -316,7 +324,69 @@ const exposants = [
     "imageUrl": "/images/exposants/gibaudpatricia.png",
     conference: false,
     atelier: false,
-  }  
+  } ,
+  {
+    "name": "ELSA AURELLE",
+    "activity": "SOIN VISAGE & MAQUILLAGE",
+    "description": "Soin visage, maquillage express Formasi, sérum éclat, crème lissante, maquillage naturel pour retrouver une peau lumineuse et un effet bonne mine en quelques minutes. Objectifs : rendre la beauté accessibles et rapide pour se sentir confiante chaque jour.",
+    "imageUrl": "/images/exposants/elsaaurelle.png",
+    "conference": false,
+    "atelier": false,
+  },
+  {
+    "name": "ADELINE ROUSSEL",
+    "activity": "SOMATOPATHIE",
+    "description": "Somatopathie - thérapie manuelle douce, méthode Poyet.",
+    "imageUrl": "/images/exposants/adelineroussel.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "ESPRIT VOLCAN",
+    "activity": "ATTRAPE SOLEIL",
+    "description": "Création d'attrapes soleil décoratifs qui diffusent la lumière et apportent des jeux de couleurs.",
+    "imageUrl": "/images/exposants/espritvolcan.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "SILVIN PIQUET",
+    "activity": "PRÉVOYANCE - RETRAITE",
+    "description": "Agent généraliste AXA. Spécialiste des problémes de fiscalités, transmission de patrimoines, optimisation fiscale et gestion de patrimoine. Produits luxembourgeois, produits pierre papier, produits retraite.",
+    "imageUrl": "/images/exposants/silvinpiquet.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "THOMAS PLOTON - ESPACE SOREI",
+    "activity": "SOPHROLOGIE & CONSTELLATIONS FAMILIALES",
+    "description": "Thomas, formé à la sophrologie et aux constellations familiales, a créé l’Espace Sorei, un lieu dédié au bien-être, à la transformation intérieure et à la connexion avec les chevaux.",
+    "imageUrl": "/images/exposants/thomasploton.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "MARION GAMOT - Ô SOURCE DE SOI",
+    "activity": "MASSAGE ÉNERGÉTIQUE, MAGNÉTISME HUMANISTE & AROMATHÉRAPIE",
+    "description": "\"Voyage vers Soi\" Votre parcours bien-être : Massage énergétique, Magnétisme Humaniste, Aromathérapie.",
+    "imageUrl": "/images/exposants/mariongamot.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "ADELINE ROUSSEL",
+    "activity": "APITHÉRAPIE",
+    "description": "Conseillère en apithérapie chez Secrets de Miel.",
+    "imageUrl": "/images/exposants/adelineroussel_miel.png",
+    "conference": false,
+    "atelier": false
+  }
+  
+ 
+  
+  
+  
+  
 ];
 
 export default function Exposants() {

@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 export default function Features() {
   const items = [
     {
-      title: "+ de 35 exposants",
+      title: "+ de 40 exposants",
       description:
         "Massage, réflexologie, énergétique chinoise, lithothérapie, coaching… Venez découvrir et tester.",
       href: "/exposants",
