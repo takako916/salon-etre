@@ -86,14 +86,6 @@ const exposants = [
     atelier: false,
   },
   {
-    name: "DELPHINE CHEVALIER",
-    activity: "MÉDIUMNITÉ - ART THÉRAPEUTE",
-    description: "Médiumnité – soin de l'âme-guidancemédiumnité – soin de l'âme-guidance\n accompagnement au deuil\n art-thérapeute",
-    imageUrl: "/images/exposants/delphinechevalier.png",
-    conference: false,
-    atelier: false,
-  },
-  {
     "name": "AMANDINE PELLIZZARI",
     "activity": "TYM AMANDINE", 
     "description": "• Massage thaï (habillé, au sol sur futon, sans huile)\n• Réflexologie plantaire thaï (habillé, au sol ou sur table, avec huile bio)\n• Massage à l'huile ‹ deep tissue › (sur table / avec huile bio) au choix: – dos – mains & bras – pieds & jambes",
