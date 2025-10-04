@@ -372,7 +372,25 @@ const exposants = [
     "imageUrl": "/images/exposants/adelineroussel_miel.png",
     "conference": false,
     "atelier": false
+  },
+  {
+    "name": "CHRISTELLE BONNET",
+    "activity": "COACHING",
+    "description": "Coaching & bilan de compétences.",
+    "imageUrl": "/images/exposants/christellebonnet.png",
+    "conference": false,
+    "atelier": false
+  },
+  {
+    "name": "SOLÈNE QUINIOU",
+    "activity": "CONSULTANTE DES ARCHIVES AKASHIQUES",
+    "description": "",
+    "imageUrl": null,
+    "conference": false,
+    "atelier": false
   }
+  
+  
   
  
   
