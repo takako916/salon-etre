@@ -278,13 +278,14 @@ const exposants = [
     atelier: false,
   },
   {
-    "name": "JULIE BOUTOULLE",
-    "activity": "SERVICE DE MASSAGE",
-    "description": "Massage holistique : Tui Na, Chi Nei Tsang, Hinokibo, MM crânien – un toucher réconfortant pour un regain d'énergie",
-    "imageUrl": "/images/exposants/julieboutoulle.png",
-    conference: false,
-    atelier: false,
-  },
+      "name": "JULIE BOUTOULLE - RANAE CRÉATIONS",
+      "activity": "ARTISANE ENCENSIÈRE",
+      "description": "Fabrication d'encens artisanaux et vente d'encens traditionnels du monde ainsi que d'artisanat sacré.",
+      "imageUrl": "/images/exposants/julieboutoulle.png",
+      "conference": false,
+      "atelier": false
+  }
+    ,
   {
     "name": "MAURY JEANNE",
     "activity": "REBOUTOLOGUE",
@@ -388,15 +389,15 @@ const exposants = [
     "imageUrl": null,
     "conference": false,
     "atelier": false
+  },
+  {
+    "name": "MANON - M-R COIFFURE",
+    "activity": "COIFFURE À DOMICILE",
+    "description": "Coiffeuse à domicile avec 14 ans d’expérience. Services disponibles les mardi, jeudi et vendredi.",
+    "imageUrl": "/images/exposants/manonmrcoiffure.jpeg",
+    "conference": false,
+    "atelier": false
   }
-  
-  
-  
- 
-  
-  
-  
-  
 ];
 
 export default function Exposants() {
