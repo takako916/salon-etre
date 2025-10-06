@@ -397,7 +397,15 @@ const exposants = [
     "imageUrl": "/images/exposants/manonmrcoiffure.jpeg",
     "conference": false,
     "atelier": false
-  }
+  },
+  {
+    "name": "SYLVIE SALVAZES - L'ÂME-AGIE",
+    "activity": "MAGNÉTISEUSE, COUPEUSE DE FEU & CRÉATRICE D'ÉLIXIRS FLORAUX",
+    "description": "Magnétiseuse et coupeuse de feu : accompagnement des traitements lourds de radiothérapie et de chimiothérapie. Créatrice de la gamme d'élixirs floraux L’Âme-Agie issus de 22 fleurs sauvages régionales certifiées AB (BIO-FR-01). Auteure du livre et jeu de cartes “À Fleurs d’Être. Le Tarot”.",
+    "imageUrl": "/images/exposants/sylviesalvazes.png",
+    "conference": false,
+    "atelier": false
+  }  
 ];
 
 export default function Exposants() {
