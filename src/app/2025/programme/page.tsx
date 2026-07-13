@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Programme Salon de l'être Blavozy 2025",
     description: "Conférences, ateliers et animations du Salon de l'être 2025",
-    url: "https://salon-etre.vercel.app/programme",
+    url: "https://salon-etre.vercel.app/2025/programme",
   },
   alternates: {
-    canonical: "https://salon-etre.vercel.app/programme",
+    canonical: "https://salon-etre.vercel.app/2025/programme",
   },
 };
 

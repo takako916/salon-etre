@@ -5,7 +5,7 @@ import Banner from './Banner';
 
 export default function ConditionalBanner() {
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
+  const isHomePage = pathname === '/2025';
 
   if (!isHomePage) {
     return null;

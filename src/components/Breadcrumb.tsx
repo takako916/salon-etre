@@ -7,22 +7,21 @@ export default function Breadcrumb() {
   
   // パンくずリストの項目を定義
   const breadcrumbItems = [
-    { path: "/", label: "Accueil" },
-    { path: "/programme", label: "Programme" },
-    { path: "/exposants", label: "Exposants" },
-    { path: "/lieu", label: "Lieu & Accès" },
-    { path: "/exposer", label: "Nous contacter" },
+    { path: "/2025", label: "Accueil" },
+    { path: "/2025/programme", label: "Programme" },
+    { path: "/2025/exposants", label: "Exposants" },
+    { path: "/2025/lieu", label: "Lieu & Accès" },
+    { path: "/2025/exposer", label: "Nous contacter" },
   ];
 
-  // 現在のパスに基づいてパンくずリストを生成
   const generateBreadcrumbs = () => {
-    const breadcrumbs = [{ path: "/", label: "Accueil" }];
-    
-    if (pathname === "/") {
+    const breadcrumbs = [{ path: "/2025", label: "Accueil" }];
+
+    if (pathname === "/2025") {
       return breadcrumbs;
     }
 
-    const currentItem = breadcrumbItems.find(item => item.path === pathname);
+    const currentItem = breadcrumbItems.find((item) => item.path === pathname);
     if (currentItem) {
       breadcrumbs.push(currentItem);
     }

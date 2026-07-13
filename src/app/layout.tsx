@@ -1,30 +1,28 @@
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
 import Script from "next/script";
-import ConditionalBanner from "@/components/ConditionalBanner";
+import {
+  salonMetadata,
+  salonOrganizationStructuredData,
+  salonWebsiteStructuredData,
+} from "@/lib/salon-seo";
 
 export const metadata = {
-  metadataBase: new URL('https://salon-etre.vercel.app'),
+  metadataBase: new URL("https://salon-etre.vercel.app"),
   title: {
-    default: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
-    template: "%s | Salon de l'être Blavozy"
+    default: salonMetadata.root.title,
+    template: salonMetadata.root.template,
   },
-  description:
-    "Salon de l'être à Blavozy (43) : bien-être, massage, réflexologie, développement personnel. 10-12 octobre 2025. Proche Le Puy-en-Velay.",
-  keywords:
-    "salon bien-être, Blavozy, Haute-Loire, 43, Le Puy-en-Velay, Le Puy en Velay, Puy en Velay, salon bien-être Puy en Velay, bien-être Haute-Loire, massage, réflexologie, énergétique, lithothérapie, coaching, conférences, ateliers, art divinatoire, tarot, astrologie, développement personnel, soins naturels, spiritualité, médium, magnétiseur, sexothérapie, cartomancie",
-  authors: [{ name: "Salon de l'être Blavozy" }],
-  creator: "Salon de l'être Blavozy",
-  publisher: "Salon de l'être Blavozy",
+  description: salonMetadata.root.description,
+  authors: [{ name: "Production Directe" }],
+  creator: "Production Directe",
+  publisher: "Production Directe",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   verification: {
-    google: "qCUSiVJLqyIsWSPIvMek8WU-XOaFbLoxe3J_WGvN9Gg",
+    google: "s6MjtAbITnIR_6OhXNY7Qf_iDqXegKpLkmmFxQkpB94",
   },
   robots: {
     index: true,
@@ -32,107 +30,51 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    siteName: "Salon de l'être Blavozy",
-    title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
-    description:
-      "Salon de l'être à Blavozy (43) : bien-être, massage, réflexologie, développement personnel. 10-12 octobre 2025. Proche Le Puy-en-Velay.",
+    siteName: "Salon du bien-être",
+    title: salonMetadata.root.title,
+    description: salonMetadata.root.description,
     url: "https://salon-etre.vercel.app",
-    images: [
-      {
-        url: "/images/affiche2025.png",
-        width: 1200,
-        height: 630,
-        alt: "Salon de l'être Blavozy 2025",
-      },
-    ],
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Salon de l'être Blavozy 2025 | Bien-être Haute-Loire 43",
-    description: "Salon de l'être à Blavozy (43) : bien-être, massage, réflexologie, développement personnel. 10-12 octobre 2025. Proche Le Puy-en-Velay.",
-    images: ["/images/affiche2025.png"],
+    title: salonMetadata.root.title,
+    description: salonMetadata.root.description,
   },
   alternates: {
     canonical: "https://salon-etre.vercel.app",
   },
   other: {
-    'application-name': 'Salon de l\'être Blavozy',
-    'apple-mobile-web-app-title': 'Salon de l\'être Blavozy',
-    'msapplication-TileColor': '#218393',
-    'theme-color': '#218393',
+    "application-name": "Salon du bien-être",
+    "apple-mobile-web-app-title": "Salon du bien-être",
+    "msapplication-TileColor": "#218393",
+    "theme-color": "#218393",
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // 構造化データ（Organization）
-  const organizationStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Salon de l'être Blavozy",
-    "url": "https://salon-etre.vercel.app",
-    "logo": "https://salon-etre.vercel.app/images/logo.png",
-    "description": "Salon de l'être à Blavozy : bien-être, massage, réflexologie, développement personnel. Proche Le Puy-en-Velay.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "8 Pl. Félix Tempère",
-      "addressLocality": "Blavozy",
-      "postalCode": "43700",
-      "addressRegion": "Haute-Loire",
-      "addressCountry": "FR"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "areaServed": "FR"
-    },
-    "sameAs": [
-      "https://salon-etre.vercel.app"
-    ]
-  };
-
-  // WebSite構造化データ
-  const websiteStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Salon de l'être Blavozy",
-    "url": "https://salon-etre.vercel.app",
-    "description": "Site officiel du Salon de l'être à Blavozy - 7e édition 2025",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Salon de l'être Blavozy"
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://salon-etre.vercel.app/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
   return (
     <html lang="fr">
       <body>
-        {/* 構造化データ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationStructuredData),
+            __html: JSON.stringify(salonOrganizationStructuredData),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteStructuredData),
+            __html: JSON.stringify(salonWebsiteStructuredData),
           }}
         />
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PKV7BJV5"
@@ -141,7 +83,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        {/* Google Tag Manager */}
         <Script id="gtm-head" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -151,11 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })(window,document,'script','dataLayer','GTM-PKV7BJV5');
           `}
         </Script>
-        <ConditionalBanner />
-        <Navbar />
-        <Breadcrumb />
         {children}
-        <Footer />
       </body>
     </html>
   );

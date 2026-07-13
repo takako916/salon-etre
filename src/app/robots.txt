@@ -7,4 +7,4 @@ Disallow: /api/
 Sitemap: https://salon-etre.vercel.app/sitemap.xml
 Crawl-delay: 1
 
-# Salon de l'être Blavozy - Site officiel
+# Salon du bien-être Blavozy - Site officiel

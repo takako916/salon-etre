@@ -1,21 +1,15 @@
 'use client';
-// components/Navbar.tsx
+
 import Link from "next/link";
 import { useState } from "react";
+import { salonNavLinks } from "@/lib/salon-nav";
 
-export default function Navbar2025() {
+export default function SalonNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const links = [
-    { href: "/2025", label: "A propos" },
-    { href: "/2025/programme", label: "Programme" },
-    { href: "/2025/exposants", label: "Exposants" },
-    { href: "/2025/lieu", label: "Lieu & Accès" },
-    { href: "/2025/exposer", label: "Nous contacter" },
-  ];
+
   return (
-    <nav className="bg-amber-200 shadow font-medieval sticky top-0 z-40">
+    <nav className="bg-salon-nav shadow font-medieval sticky top-0 z-40" data-salon-version="2026">
       <div className="flex items-center justify-center md:justify-center px-4 py-2 md:py-3 relative">
-        {/* ハンバーガーアイコン（モバイル用） */}
         <button
           className="absolute right-4 md:hidden"
           onClick={() => setMenuOpen((open) => !open)}
@@ -25,25 +19,24 @@ export default function Navbar2025() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        {/* メニュー（PC用） */}
         <ul className="hidden md:flex justify-center items-center gap-6 text-base md:text-lg md:text-xl font-medium">
-          {links.map((l) => (
+          {salonNavLinks.map((l) => (
             <li key={l.href} className="text-center">
-              <Link href={l.href} className="hover:text-emerald-700 px-4 block whitespace-nowrap">
+              <Link href={l.href} prefetch={false} className="hover:text-salon-accent px-4 block whitespace-nowrap">
                 {l.label}
               </Link>
             </li>
           ))}
         </ul>
       </div>
-      {/* メニュー（モバイル用） */}
       {menuOpen && (
-        <ul className="flex flex-col md:hidden gap-2 px-4 pb-4 text-base font-medium animate-fade-in">
-          {links.map((l) => (
+        <ul className="flex flex-col md:hidden gap-2 px-4 pb-4 text-base font-medium">
+          {salonNavLinks.map((l) => (
             <li key={l.href} className="text-center">
               <Link
                 href={l.href}
-                className="hover:text-emerald-700 px-4 block whitespace-nowrap"
+                prefetch={false}
+                className="hover:text-salon-accent px-4 block whitespace-nowrap"
                 onClick={() => setMenuOpen(false)}
               >
                 {l.label}

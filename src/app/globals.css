@@ -1,28 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import "tailwindcss";
+
+@source "../**/*.{js,ts,jsx,tsx}";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Salon theme — change these to update site-wide colors */
+  --salon-primary: #218393;
+  --salon-accent: #047857;
+  --salon-surface: #fcf7ea;
+  --salon-nav: #fde68a;
+  --salon-footer: #63ad9e;
+  --salon-cta: #ea580c;
+  --salon-highlight: #ea580c;
+  --salon-badge: #fde68a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-salon-primary: var(--salon-primary);
+  --color-salon-accent: var(--salon-accent);
+  --color-salon-surface: var(--salon-surface);
+  --color-salon-nav: var(--salon-nav);
+  --color-salon-footer: var(--salon-footer);
+  --color-salon-cta: var(--salon-cta);
+  --color-salon-highlight: var(--salon-highlight);
+  --color-salon-badge: var(--salon-badge);
 }
 
 body {
@@ -39,6 +46,6 @@ body {
   font-family: 'Playfair Display', serif !important;
 }
 
-h1, h2 { 
-  font-family: 'Playfair Display', serif !important; 
+h1, h2 {
+  font-family: 'Playfair Display', serif !important;
 }

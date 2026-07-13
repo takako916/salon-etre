@@ -13,8 +13,8 @@ type CardProps = {
 export default function Card({ title, description, href, isNew, atelier }: CardProps) {
   // ボタンテキストをhrefで判定
   let buttonText = "";
-  if (href === "/exposants") buttonText = "Liste d'exposants";
-  if (href === "/programme") buttonText = "Programme";
+  if (href === "/2025/exposants") buttonText = "Liste d'exposants";
+  if (href === "/2025/programme") buttonText = "Programme";
 
   const content = (
     <div className="bg-[#fcf7ea] rounded-lg shadow-md p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer relative min-h-[180px] flex flex-col justify-between">
