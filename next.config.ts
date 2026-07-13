@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'salon-etre.vercel.app',
+        hostname: 'bien-etre.production-directe.com',
       },
     ],
   },

@@ -3,7 +3,7 @@ import { salon2026 } from "./salon-2026";
 
 export const salonSeo = {
   siteName: "Salon du bien-être",
-  baseUrl: "https://salon-etre.vercel.app",
+  baseUrl: "https://bien-etre.production-directe.com",
   location: "Blavozy, Haute-Loire (43)",
   venue: "Centre socio-culturel de Blavozy",
   dates: salon2026.dates.labelShort,

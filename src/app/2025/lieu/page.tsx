@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Lieu & Accès Salon de l'être Blavozy 2025",
     description: "Centre socio-culturel de Blavozy - 10-12 octobre 2025",
-    url: "https://salon-etre.vercel.app/2025/lieu",
+    url: "https://bien-etre.production-directe.com/2025/lieu",
   },
   alternates: {
-    canonical: "https://salon-etre.vercel.app/2025/lieu",
+    canonical: "https://bien-etre.production-directe.com/2025/lieu",
   },
 };
 

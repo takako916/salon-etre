@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nous Contacter - Salon de l'être Blavozy 2025",
     description: "Contactez l'organisation pour exposer ou informations",
-    url: "https://salon-etre.vercel.app/2025/exposer",
+    url: "https://bien-etre.production-directe.com/2025/exposer",
   },
   alternates: {
-    canonical: "https://salon-etre.vercel.app/2025/exposer",
+    canonical: "https://bien-etre.production-directe.com/2025/exposer",
   },
 };
 

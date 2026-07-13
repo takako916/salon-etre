@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { salonSeo } from '@/lib/salon-seo'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://salon-etre.vercel.app'
+  const baseUrl = salonSeo.baseUrl
   
   return [
     {

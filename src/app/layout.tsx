@@ -3,11 +3,12 @@ import Script from "next/script";
 import {
   salonMetadata,
   salonOrganizationStructuredData,
+  salonSeo,
   salonWebsiteStructuredData,
 } from "@/lib/salon-seo";
 
 export const metadata = {
-  metadataBase: new URL("https://salon-etre.vercel.app"),
+  metadataBase: new URL(salonSeo.baseUrl),
   title: {
     default: salonMetadata.root.title,
     template: salonMetadata.root.template,
@@ -39,7 +40,7 @@ export const metadata = {
     siteName: "Salon du bien-être",
     title: salonMetadata.root.title,
     description: salonMetadata.root.description,
-    url: "https://salon-etre.vercel.app",
+    url: salonSeo.baseUrl,
     locale: "fr_FR",
     type: "website",
   },
@@ -49,7 +50,7 @@ export const metadata = {
     description: salonMetadata.root.description,
   },
   alternates: {
-    canonical: "https://salon-etre.vercel.app",
+    canonical: salonSeo.baseUrl,
   },
   other: {
     "application-name": "Salon du bien-être",

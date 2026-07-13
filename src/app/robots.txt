@@ -4,7 +4,7 @@ Allow: /static/
 Allow: /images/
 Disallow: /api/
 
-Sitemap: https://salon-etre.vercel.app/sitemap.xml
+Sitemap: https://bien-etre.production-directe.com/sitemap.xml
 Crawl-delay: 1
 
 # Salon du bien-être Blavozy - Site officiel
