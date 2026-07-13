@@ -89,6 +89,7 @@ export default function Gallery() {
                 alt={image.alt}
                 width={320}
                 height={224}
+                loading="lazy"
                 className="h-48 md:h-56 w-64 md:w-80 rounded-lg shadow-md object-cover transition-all duration-300 hover:scale-105"
               />
             </div>

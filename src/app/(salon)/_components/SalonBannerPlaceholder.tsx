@@ -1,16 +1,31 @@
+import Image from "next/image";
+
 export default function SalonBannerPlaceholder() {
   return (
     <section
-      className="w-full flex items-center justify-center text-white font-playfair"
-      style={{
-        minHeight: "250px",
-        background: `linear-gradient(135deg, var(--salon-primary) 0%, var(--salon-footer) 100%)`,
-      }}
+      className="w-full overflow-hidden bg-[#f3eee3] md:bg-transparent"
       aria-label="Bannière Salon du bien-être 2026"
     >
-      <p className="text-2xl md:text-4xl font-bold text-center px-4">
-        Salon du bien-être 2026
-      </p>
+      <Image
+        src="/images/bannier2026_mb.jpg"
+        alt="Salon du bien-être 2026"
+        width={800}
+        height={400}
+        className="h-auto w-full md:hidden"
+        priority
+        quality={88}
+        sizes="100vw"
+      />
+      <Image
+        src="/images/bannier2026.jpg"
+        alt="Salon du bien-être 2026"
+        width={1920}
+        height={250}
+        className="hidden h-[250px] w-full object-cover object-center md:block"
+        priority
+        quality={85}
+        sizes="100vw"
+      />
     </section>
   );
 }
