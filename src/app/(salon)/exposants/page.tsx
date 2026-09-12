@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import ScrollToTop from "@/components/ScrollToTop";
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import {
   salonExposants2026,
   type SalonExposant2026,
@@ -33,22 +33,36 @@ function WebsiteIcon({ className }: { className?: string }) {
   );
 }
 
+type ExposantLink = {
+  href: string;
+  label: string;
+  Icon: ({ className }: { className?: string }) => ReactNode;
+};
+
 function ExposantLinks({ exposant }: { exposant: SalonExposant2026 }) {
-  const links = [
-    exposant.facebook
-      ? { href: exposant.facebook, label: `Facebook — ${exposant.name}`, Icon: FacebookIcon }
-      : null,
-    exposant.instagram
-      ? { href: exposant.instagram, label: `Instagram — ${exposant.name}`, Icon: InstagramIcon }
-      : null,
-    exposant.website
-      ? { href: exposant.website, label: `Site web — ${exposant.name}`, Icon: WebsiteIcon }
-      : null,
-  ].filter(Boolean) as {
-    href: string;
-    label: string;
-    Icon: ({ className }: { className?: string }) => JSX.Element;
-  }[];
+  const links: ExposantLink[] = [];
+
+  if (exposant.facebook) {
+    links.push({
+      href: exposant.facebook,
+      label: `Facebook — ${exposant.name}`,
+      Icon: FacebookIcon,
+    });
+  }
+  if (exposant.instagram) {
+    links.push({
+      href: exposant.instagram,
+      label: `Instagram — ${exposant.name}`,
+      Icon: InstagramIcon,
+    });
+  }
+  if (exposant.website) {
+    links.push({
+      href: exposant.website,
+      label: `Site web — ${exposant.name}`,
+      Icon: WebsiteIcon,
+    });
+  }
 
   if (links.length === 0) return null;
 
