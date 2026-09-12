@@ -2,29 +2,134 @@
 
 import Image from "next/image";
 import ScrollToTop from "@/components/ScrollToTop";
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
+import {
+  salonExposants2026,
+  type SalonExposant2026,
+} from "@/lib/salon-exposants-2026";
 
-type Exposant = {
-  name: string;
-  activity: string;
-  description: string;
-  imageUrl: string | null;
-  conference: boolean;
-  atelier: boolean;
-};
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.9v-2.9h2.4V9.84c0-2.37 1.4-3.69 3.56-3.69 1.03 0 2.11.19 2.11.19v2.32h-1.19c-1.17 0-1.54.73-1.54 1.48v1.77h2.62l-.42 2.9h-2.2V22c4.78-.75 8.44-4.91 8.44-9.93z" />
+    </svg>
+  );
+}
 
-const exposants: Exposant[] = [];
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.75 1.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" />
+    </svg>
+  );
+}
+
+function WebsiteIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z" />
+    </svg>
+  );
+}
+
+function ExposantLinks({ exposant }: { exposant: SalonExposant2026 }) {
+  const links = [
+    exposant.facebook
+      ? { href: exposant.facebook, label: `Facebook — ${exposant.name}`, Icon: FacebookIcon }
+      : null,
+    exposant.instagram
+      ? { href: exposant.instagram, label: `Instagram — ${exposant.name}`, Icon: InstagramIcon }
+      : null,
+    exposant.website
+      ? { href: exposant.website, label: `Site web — ${exposant.name}`, Icon: WebsiteIcon }
+      : null,
+  ].filter(Boolean) as {
+    href: string;
+    label: string;
+    Icon: ({ className }: { className?: string }) => JSX.Element;
+  }[];
+
+  if (links.length === 0) return null;
+
+  return (
+    <div className="mt-3 flex items-center gap-3">
+      {links.map(({ href, label, Icon }) => (
+        <a
+          key={href}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={label}
+          className="text-salon-primary transition-colors hover:text-salon-cta"
+        >
+          <Icon className="h-5 w-5" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function ExposantCard({ exposant }: { exposant: SalonExposant2026 }) {
+  return (
+    <article className="flex h-full flex-col overflow-hidden rounded-xl border border-salon-accent/30 bg-salon-surface shadow-sm transition-shadow duration-300 hover:shadow-lg">
+      <div className="relative aspect-[4/5] w-full bg-[#e8e2d4]">
+        {exposant.imageUrl ? (
+          <Image
+            src={exposant.imageUrl}
+            alt={exposant.name}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center text-gray-400">?</div>
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col p-4 md:p-5">
+        {exposant.businessName && (
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-salon-accent">
+            {exposant.businessName}
+          </p>
+        )}
+        <h2 className="font-playfair text-xl font-semibold text-salon-primary">{exposant.name}</h2>
+        <p className="mt-1 text-sm leading-snug text-gray-700">{exposant.profession}</p>
+
+        <ExposantLinks exposant={exposant} />
+
+        {(exposant.conference || exposant.atelier) && (
+          <div className="mt-auto flex flex-wrap gap-2 pt-4">
+            {exposant.conference && (
+              <span className="rounded bg-salon-cta px-2 py-1 text-xs font-bold text-white shadow-sm">
+                CONFÉRENCE
+              </span>
+            )}
+            {exposant.atelier && (
+              <span className="rounded bg-salon-badge px-2 py-1 text-xs font-bold text-salon-accent shadow-sm">
+                ATELIER
+              </span>
+            )}
+          </div>
+        )}
+      </div>
+    </article>
+  );
+}
 
 export default function Exposants() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("all");
 
   const filteredExposants = useMemo(() => {
-    return exposants.filter((exposant) => {
+    const query = searchTerm.toLowerCase().trim();
+
+    return salonExposants2026.filter((exposant) => {
       const matchesSearch =
-        exposant.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        exposant.activity.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        exposant.description.toLowerCase().includes(searchTerm.toLowerCase());
+        !query ||
+        exposant.name.toLowerCase().includes(query) ||
+        exposant.profession.toLowerCase().includes(query) ||
+        (exposant.businessName?.toLowerCase().includes(query) ?? false);
 
       const matchesFilter =
         selectedFilter === "all" ||
@@ -36,8 +141,8 @@ export default function Exposants() {
   }, [searchTerm, selectedFilter]);
 
   return (
-    <div className="max-w-5xl mx-auto py-8 px-2">
-      <h1 className="text-center text-xl text-salon-primary mb-8 font-playfair">
+    <div className="mx-auto max-w-6xl px-3 py-8 md:px-4">
+      <h1 className="mb-8 text-center font-playfair text-xl text-salon-primary">
         Liste des exposants 2026
       </h1>
 
@@ -48,10 +153,10 @@ export default function Exposants() {
             placeholder="Rechercher un exposant, une activité..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-4 py-3 pl-12 border border-salon-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-salon-primary focus:border-transparent bg-white"
+            className="w-full rounded-lg border border-salon-accent bg-white px-4 py-3 pl-12 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-salon-primary"
           />
           <svg
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+            className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -65,10 +170,10 @@ export default function Exposants() {
           </svg>
         </div>
 
-        <div className="flex flex-wrap gap-2 justify-center">
+        <div className="flex flex-wrap justify-center gap-2">
           <button
             onClick={() => setSelectedFilter("all")}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            className={`rounded-lg px-4 py-2 font-medium transition-colors ${
               selectedFilter === "all"
                 ? "bg-salon-accent text-white"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -78,17 +183,17 @@ export default function Exposants() {
           </button>
           <button
             onClick={() => setSelectedFilter("conference")}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            className={`rounded-lg px-4 py-2 font-medium transition-colors ${
               selectedFilter === "conference"
                 ? "bg-salon-cta text-white"
                 : "bg-orange-100 text-orange-700 hover:bg-orange-200"
             }`}
           >
-            Conference
+            Conférence
           </button>
           <button
             onClick={() => setSelectedFilter("atelier")}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            className={`rounded-lg px-4 py-2 font-medium transition-colors ${
               selectedFilter === "atelier"
                 ? "bg-salon-badge text-salon-accent"
                 : "bg-amber-100 text-amber-700 hover:bg-amber-200"
@@ -104,24 +209,9 @@ export default function Exposants() {
         </div>
       </div>
 
-      {exposants.length === 0 && (
-        <div className="bg-salon-surface border border-salon-accent rounded-lg p-8 text-center mb-8">
-          <p className="text-gray-700 text-lg">
-            La liste des exposants sera publiée prochainement.
-          </p>
-          <p className="text-gray-500 mt-2 text-sm">
-            Vous souhaitez exposer ? Consultez la page{" "}
-            <a href="/exposer" className="text-salon-primary underline">
-              Nous contacter
-            </a>
-            .
-          </p>
-        </div>
-      )}
-
-      {exposants.length > 0 && filteredExposants.length === 0 && (
-        <div className="text-center py-12">
-          <div className="text-gray-500 text-lg mb-4">
+      {filteredExposants.length === 0 ? (
+        <div className="py-12 text-center">
+          <div className="mb-4 text-lg text-gray-500">
             Aucun exposant ne correspond à votre recherche
           </div>
           <button
@@ -129,57 +219,19 @@ export default function Exposants() {
               setSearchTerm("");
               setSelectedFilter("all");
             }}
-            className="px-6 py-2 bg-salon-accent text-white rounded-lg hover:opacity-90 transition-colors"
+            className="rounded-lg bg-salon-accent px-6 py-2 text-white transition-colors hover:opacity-90"
           >
             Réinitialiser la recherche
           </button>
         </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredExposants.map((exposant) => (
+            <ExposantCard key={exposant.name} exposant={exposant} />
+          ))}
+        </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {filteredExposants.map((exposant, i) => (
-          <div
-            key={i}
-            className="flex bg-salon-surface border border-salon-accent rounded p-6 items-center gap-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            <div className="flex-shrink-0">
-              {exposant.imageUrl ? (
-                <Image
-                  src={exposant.imageUrl}
-                  alt={exposant.name}
-                  width={96}
-                  height={128}
-                  className="w-24 h-32 object-cover rounded"
-                />
-              ) : (
-                <svg width="96" height="128" viewBox="0 0 96 128" fill="none">
-                  <rect x="12" y="16" width="72" height="96" rx="8" stroke="#222" strokeWidth="6" fill="none" />
-                  <polygon points="24,104 48,64 72,104" fill="#222" />
-                  <circle cx="36" cy="40" r="8" fill="#222" />
-                </svg>
-              )}
-            </div>
-            <div className="flex-1">
-              <div className="font-serif text-lg font-semibold mb-2">
-                {exposant.name} - {exposant.activity}
-              </div>
-              <div className="text-sm whitespace-pre-line mb-4">{exposant.description}</div>
-              <div className="flex gap-2 justify-end">
-                {exposant.conference && (
-                  <span className="bg-salon-cta text-white text-xs font-bold px-2 py-1 rounded shadow-md">
-                    CONFÉRENCE
-                  </span>
-                )}
-                {exposant.atelier && (
-                  <span className="bg-salon-badge text-salon-accent text-xs font-bold px-2 py-1 rounded shadow-md">
-                    ATELIER
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
       <ScrollToTop />
     </div>
   );

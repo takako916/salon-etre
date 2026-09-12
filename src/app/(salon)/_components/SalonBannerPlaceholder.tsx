@@ -7,7 +7,7 @@ export default function SalonBannerPlaceholder() {
       aria-label="Bannière Salon du bien-être 2026"
     >
       <Image
-        src="/images/bannier2026_mb.jpg"
+        src="/images/bannier2026_mb.png"
         alt="Salon du bien-être 2026"
         width={800}
         height={400}
@@ -17,7 +17,7 @@ export default function SalonBannerPlaceholder() {
         sizes="100vw"
       />
       <Image
-        src="/images/bannier2026.jpg"
+        src="/images/bannier2026.png"
         alt="Salon du bien-être 2026"
         width={1920}
         height={250}
