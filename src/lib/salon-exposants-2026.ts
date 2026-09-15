@@ -16,8 +16,8 @@ export const salonExposants2026: SalonExposant2026[] = [
     profession: "Conseillère et formatrice en huiles essentielles",
     businessName: "Aroma'Life",
     imageUrl: "/images/exposants/2026/alice_laurent.png",
-    conference: false,
-    atelier: false,
+    conference: true,
+    atelier: true,
     instagram:"https://www.instagram.com/aromalifeacademie",
   },
   {
@@ -102,7 +102,7 @@ export const salonExposants2026: SalonExposant2026[] = [
     atelier: false,
   },
   {
-    name: "Michèle et Bernard Perron",
+    name: "Michèle Perron",
     profession: "Bijoux Magnetx",
     businessName: "Magnetix Wellness",
     imageUrl: "/images/exposants/2026/michele_perron.png",
