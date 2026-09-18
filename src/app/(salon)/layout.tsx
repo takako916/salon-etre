@@ -6,8 +6,10 @@ import SalonFooter from "./_components/SalonFooter";
 export default function SalonLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <SalonConditionalBanner />
-      <SalonNavbar />
+      <div className="sticky top-0 z-50">
+        <SalonConditionalBanner />
+        <SalonNavbar />
+      </div>
       <SalonBreadcrumb />
       {children}
       <SalonFooter />

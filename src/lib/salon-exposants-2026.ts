@@ -223,4 +223,13 @@ export const salonExposants2026: SalonExposant2026[] = [
     atelier: false,
     instagram: "https://www.instagram.com/danycless/",
   },
+  {
+    name: "Olivier Rossignol",
+    profession: "Accompagnateur énergétique dans l'expression de l'Etre",
+    businessName: "Eveil Matriciel",
+    imageUrl: "/images/exposants/2026/olivier_rossignol.png",
+    conference: false,
+    atelier: true,
+    facebook: "https://www.facebook.com/profile.php?id=61553761825037",
+  },
 ];

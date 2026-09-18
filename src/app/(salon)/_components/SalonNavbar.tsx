@@ -8,7 +8,7 @@ export default function SalonNavbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-salon-nav shadow font-medieval sticky top-0 z-40" data-salon-version="2026">
+    <nav className="bg-salon-nav shadow font-medieval" data-salon-version="2026">
       <div className="flex items-center justify-center md:justify-center px-4 py-2 md:py-3 relative">
         <button
           className="absolute right-4 md:hidden"
