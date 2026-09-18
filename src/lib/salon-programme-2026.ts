@@ -94,6 +94,13 @@ export const salonProgramme2026: ProgrammeDay2026[] = [
         imageUrl: "/images/programme/2026/conf_2.png",
       },
       {
+        time: "15h00-16h00",
+        type: "ATELIER",
+        name: "Olivier Rossignol - Eveil Matriciel",
+        title: "Découverte du tambour et de la table vibratoire, avec vente sur place.",
+        description: null,
+      },
+      {
         time: "16h00-17h00",
         type: "ATELIER",
         name: "Wellness by Coline",
@@ -134,9 +141,9 @@ export const salonProgramme2026: ProgrammeDay2026[] = [
       },
       {
         time: "10h00-11h00",
-        type: "CONFÉRENCE",
-        name: "Audrey Gonzales - Au Cœur du Sommeil",
-        title: "Prendre conscience de l’importance du sommeil.",
+        type: "ATELIER",
+        name: "Olivier Rossignol - Eveil Matriciel",
+        title: "Découverte du tambour et de la table vibratoire, avec vente sur place.",
         description:null,
         imageUrl: null,
       },
