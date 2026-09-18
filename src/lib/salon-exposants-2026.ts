@@ -76,7 +76,7 @@ export const salonExposants2026: SalonExposant2026[] = [
   },
   {
     name: "Joëlle Gire",
-    profession: "Créatrice de crochets",
+    profession: "Créatrice au crochet",
     businessName: "Le crochet de Joëlle",
     imageUrl: "/images/exposants/2026/joelle_gire.png",
     conference: false,
@@ -95,7 +95,7 @@ export const salonExposants2026: SalonExposant2026[] = [
     website:"https://chizoukou.com/",
   },
   {
-    name: "Adeline Roussel-Dussalut",
+    name: "Adeline Roussel-Dussault",
     profession: "Somatopathie",
     imageUrl: "/images/exposants/2026/adeline_roussel-dussault.png",
     conference: false,
@@ -103,7 +103,7 @@ export const salonExposants2026: SalonExposant2026[] = [
   },
   {
     name: "Michèle Perron",
-    profession: "Bijoux Magnetx",
+    profession: "Bijoux Magnetix",
     businessName: "Magnetix Wellness",
     imageUrl: "/images/exposants/2026/michele_perron.png",
     conference: false,
@@ -157,7 +157,7 @@ export const salonExposants2026: SalonExposant2026[] = [
   },
   {
     name: "Amélie Lashermes",
-    profession: "Fabrication des bugies",
+    profession: "Fabrication de bougies",
     businessName: "La Fabrique de Winnie",
     imageUrl: "/images/exposants/2026/amelie_lashermes.png",
     conference: false,
@@ -187,7 +187,7 @@ export const salonExposants2026: SalonExposant2026[] = [
   },
   {
     name: "Morgan Emica",
-    profession: "Claire voyance accompagnement sur l'identité",
+    profession: "Clairvoyance accompagnement sur l'identité",
     businessName: "Solaria Alchimia",
     imageUrl: "/images/exposants/2026/morgan_emica.png",
     conference: false,
@@ -226,7 +226,7 @@ export const salonExposants2026: SalonExposant2026[] = [
   {
     name: "Olivier Rossignol",
     profession: "Accompagnateur énergétique dans l'expression de l'Etre",
-    businessName: "Eveil Matriciel",
+    businessName: "Éveil Matriciel",
     imageUrl: "/images/exposants/2026/olivier_rossignol.png",
     conference: false,
     atelier: true,
