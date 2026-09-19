@@ -112,7 +112,7 @@ function ExposantCard({ exposant }: { exposant: SalonExposant2026 }) {
 
         <ExposantLinks exposant={exposant} />
 
-        {(exposant.conference || exposant.atelier) && (
+        {(exposant.conference || exposant.atelier || exposant.animation) && (
           <div className="mt-auto flex flex-wrap gap-2 pt-4">
             {exposant.conference && (
               <span className="rounded bg-salon-cta px-2 py-1 text-xs font-bold text-white shadow-sm">
@@ -122,6 +122,11 @@ function ExposantCard({ exposant }: { exposant: SalonExposant2026 }) {
             {exposant.atelier && (
               <span className="rounded bg-salon-badge px-2 py-1 text-xs font-bold text-salon-accent shadow-sm">
                 ATELIER
+              </span>
+            )}
+            {exposant.animation && (
+              <span className="rounded bg-salon-primary px-2 py-1 text-xs font-bold text-white shadow-sm">
+                ANIMATION
               </span>
             )}
           </div>
@@ -148,7 +153,8 @@ export default function Exposants() {
       const matchesFilter =
         selectedFilter === "all" ||
         (selectedFilter === "conference" && exposant.conference) ||
-        (selectedFilter === "atelier" && exposant.atelier);
+        (selectedFilter === "atelier" && exposant.atelier) ||
+        (selectedFilter === "animation" && exposant.animation);
 
       return matchesSearch && matchesFilter;
     });
@@ -214,6 +220,16 @@ export default function Exposants() {
             }`}
           >
             Atelier
+          </button>
+          <button
+            onClick={() => setSelectedFilter("animation")}
+            className={`rounded-lg px-4 py-2 font-medium transition-colors ${
+              selectedFilter === "animation"
+                ? "bg-salon-primary text-white"
+                : "bg-teal-100 text-teal-800 hover:bg-teal-200"
+            }`}
+          >
+            Animation
           </button>
         </div>
 
