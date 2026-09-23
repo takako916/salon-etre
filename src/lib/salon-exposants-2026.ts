@@ -69,6 +69,16 @@ export const salonExposants2026: SalonExposant2026[] = [
     facebook: "https://www.facebook.com/profile.php?id=100011753498270",
   },
   {
+    name: "Cédric Pesselon",
+    profession: "Location Van voyage",
+    businessName: "Van de la liberté",
+    imageUrl: "/images/exposants/2026/cedric_pesselon.png",
+    conference: false,
+    atelier: false,
+    animation: false,
+    website: "https://cenadess.fr/",
+  },
+  {
     name: "Claire Henquet",
     profession: "Autrice- Santé mentale et résilience",
     businessName: "Vous ne guérirez jamais!",
@@ -117,6 +127,15 @@ export const salonExposants2026: SalonExposant2026[] = [
     atelier: false,
     animation: false,
     website: "https://lamaisonpassiveenboisetpaille.over-blog.com/",
+  },
+  {
+    name: "Jean-jacque Larwa",
+    profession: "Minéraux bruts de Haute-Loire",
+    businessName: "Esprit du volcan",
+    imageUrl: "/images/exposants/2026/jean-jacque_larwa.png",
+    conference: false,
+    atelier: false,
+    animation: false,
   },
   {
     name: "Jeanne Maury",
