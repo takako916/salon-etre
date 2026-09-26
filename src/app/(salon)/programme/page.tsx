@@ -17,6 +17,8 @@ function typeBadgeClass(type: ProgrammeEventType) {
       return "bg-salon-badge text-salon-accent";
     case "ANIMATION":
       return "bg-salon-primary text-white";
+    case "PRÉSENTATION":
+      return "border border-salon-accent bg-white text-salon-accent";
     default:
       return "bg-gray-200 text-gray-700";
   }

@@ -1,6 +1,6 @@
 import { salon2026 } from "./salon-2026";
 
-export type ProgrammeEventType = "CONFÉRENCE" | "ATELIER" | "ANIMATION";
+export type ProgrammeEventType = "CONFÉRENCE" | "ATELIER" | "ANIMATION" | "PRÉSENTATION";
 
 export type ProgrammeEvent2026 = {
   time: string;
@@ -70,10 +70,18 @@ export const salonProgramme2026: ProgrammeDay2026[] = [
         imageUrl: "/images/programme/2026/conf_1.png",
       },
       {
-        time: "13h00-13h30",
+        time: "13h00-13h15",
         type: "ANIMATION",
         name: null,
         title: "Quiz sur le bien-être : cadeaux à gagner.",
+        description: null,
+        imageUrl: null,
+      },
+      {
+        time: "13h15-13h50",
+        type: "PRÉSENTATION",
+        name: "Camille Héricher - Écoute profonde",
+        title: "Présentation de l'écoute profonde",
         description: null,
         imageUrl: null,
       },
@@ -164,7 +172,15 @@ export const salonProgramme2026: ProgrammeDay2026[] = [
         imageUrl: "/images/programme/2026/conf_4.png",
       },
       {
-        time: "13h00-14h00",
+        time: "12h00-12h30",
+        type: "PRÉSENTATION",
+        name: "Camille Héricher - Écoute profonde",
+        title: "Présentation de l'écoute profonde",
+        description: null,
+        imageUrl: null,
+      },
+      {
+        time: "12h30-13h30",
         type: "ANIMATION",
         name: "CONCERT - Groupe TAMAÏ",
         title: "Handpan & Co.",
