@@ -69,6 +69,15 @@ export const salonExposants2026: SalonExposant2026[] = [
     facebook: "https://www.facebook.com/profile.php?id=100011753498270",
   },
   {
+    name: "Camille Héricher",
+    profession: "Écoute profonde",
+    imageUrl: "/images/exposants/2026/camille_hericher.png",
+    conference: false,
+    atelier: false,
+    animation: false,
+    website: "https://www.espacepuravida.fr/nostherapeutes/camillehericher",
+  },
+  {
     name: "Cédric Pesselon",
     profession: "Location Van voyage",
     businessName: "Van de la liberté",
